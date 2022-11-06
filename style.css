@@ -8,7 +8,7 @@ html{
 body{
     height: auto;   
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #ffffff;
+    background-color: #e1e1e1;
 }
 header{
     width: 100%;
@@ -20,9 +20,10 @@ header{
     background-position: center;
 }
 .logo{
-    width: 130px;
-    height: 90px;
+    width: 120px;
+    height: 70px;
     margin-left: 20px;
+    margin-top: 10px;
 }
 nav{
     height: 90px;
@@ -31,6 +32,7 @@ nav{
     box-shadow: 0px 2px 4px rgba(0,0,0,0.144);
     position: fixed;
     margin-right: 20px;
+    z-index: 1;
 }
 nav ul{
     float: right;
@@ -78,7 +80,8 @@ p{
 h1{
     color: cornflowerblue;
     margin-left: 20px;
-    margin-top: 20px;
+    margin-top: 40px;
+    margin-bottom: 30px;
     padding: auto;
 }
 .alle_beispiele{
@@ -86,6 +89,7 @@ h1{
     height: auto;
     text-align: center;
     margin: 6px;
+    margin-bottom: 30px;
 }
 .ein_beispiel{
     
@@ -108,12 +112,16 @@ h1{
     margin-right: 50px;
 }
 .wir_bild{
-    float: left;
-    height: 400px;
-    margin-right: 10px;
-    margin-right: 20px;
+    position: relative;
+    left: 10px;
+    width: 60%;
+    margin-bottom: 10px;
 }
 .wir_text{
+    position: relative;
+    left: 65%;
+    bottom: 400px;
+    width: 35%;
     font-size: 25px;
     text-align: justify;
 }
@@ -121,6 +129,45 @@ input{
     display: none;
 }
 
+.Fußzeile{
+    height: auto;
+    width: 27%;
+    float: left;
+    margin-right: 2%;
+    margin-left: 2%;
+    padding: 10px;
+
+}
+
+.Fußzeile li{
+    padding: 10px 10px 10px 10px;
+    list-style: none;
+}
+
+.Fußzeile li h1{
+    color: #e0d8d8;
+    font-size: 44px;
+    margin-left: 0px;
+    margin-bottom: 30px;
+}
+
+.Fußzeile li a{
+    color: #e0d8d8;
+    font-size: 24px;
+    display: block;
+    text-align: left;
+    text-decoration: none;
+}
+
+.Fußzeile ul li a:hover{
+    text-decoration: underline #ebebeb;
+}
+
+footer{
+    height: 400px;
+    width: auto;
+    background-color: #9b9898;
+}
 
 @media(max-width: 1100px){
     .toggle_button{
