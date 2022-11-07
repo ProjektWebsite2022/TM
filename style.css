@@ -159,7 +159,7 @@ input{
 }
 
 .Fußzeile ul li a:hover{
-    text-decoration: underline #ebebeb;
+    text-decoration: underline #ebebeb solid;
 }
 
 footer{
@@ -169,6 +169,7 @@ footer{
 }
 
 @media(max-width: 1100px){
+    
     .toggle_button{
         display: flex;
     }
@@ -176,7 +177,6 @@ footer{
         height: min-content;
         width: 100%;
         background: white;
-
         display: none;
         position: absolute;
         top: 80px;
@@ -192,12 +192,46 @@ footer{
     #toggle_button:checked ~ ul{
         display: block;
     }
+    .ein_beispiel{
+        width: auto;
+        height: auto;
+        display: inline-block;
+        padding: 20px;
+        margin: 0px;
+    }
+    .beispiel_bild{
+        width: 300px;
+        height: 200px;
+    }
+    .wir{
+        margin: 0px;
+    }
     .wir_bild{
-        height: 400px;
-        margin-right: 10px;
+        position: static;
+        height: auto;
+        width: 100%;
+        margin-left: 0px;
         float: none;
     }
     .wir_text{
         text-orientation: inherit;
+    }
+    .wir_text{
+        position: static;
+        left: 2%;
+        width: 100%;
+        font-size: 25px;
+        text-align: justify;
+    }
+    .Fußzeile{
+        height: auto;
+        width: auto;
+        float: none;
+        margin: 0px;
+    }
+    footer{
+        height: 900px;
+        width: auto;
+        background-color: #9b9898;
     }
 }
