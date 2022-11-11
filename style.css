@@ -82,8 +82,71 @@ h1{
     margin-left: 20px;
     margin-top: 40px;
     margin-bottom: 30px;
+    margin-right: 0px;
     padding: auto;
 }
+
+details {
+    width: 100%;
+    margin-right: 10px;
+    background: #d4cccc;
+    margin-bottom: .5rem;
+    box-shadow: 0 .1rem 1rem -.5rem rgba(0,0,0,.4);
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+summary{
+    font-size: 50px;
+    color: rgb(245, 241, 241);
+    display: block;
+    background-color: rgb(126, 123, 123);
+    border-radius: 5px;
+    padding: 10px;
+    padding-left: 20px;
+    cursor: pointer;
+}
+
+summary:before {
+    content: '';
+    border-width: .4rem;
+    border-style: solid;
+    border-color: transparent transparent transparent #fff;
+    position: absolute;
+    top: 1.3rem;
+    left: 1rem;
+    transform: rotate(0);
+    transform-origin: .2rem 50%;
+    transition: .25s transform ease;
+  }
+
+  details[open] > summary:before {
+    transform: rotate(90deg);
+  }
+
+
+.Ersteindruck{
+    width: auto;
+    height: 550px;
+    padding: 10px;
+}
+
+.Ersteindruck_Bild{
+    position: relative;
+    left: 60%;
+    bottom: 220px;
+    width: 40%;
+}
+
+.Ersteindruck_Text{
+    position: relative;
+    left: 10px;
+    font-weight: bold;
+    font-size: 50px;
+    width: 56%;
+    margin: 200px 20px 30px 40px;
+}
+
 .alle_beispiele{
     width: auto;
     height: auto;
@@ -110,6 +173,7 @@ h1{
     padding: 20px;
     margin-left: 50px;
     margin-right: 50px;
+    margin-bottom: 50px;
 }
 .wir_bild{
     position: relative;
@@ -118,11 +182,12 @@ h1{
     margin-bottom: 10px;
 }
 .wir_text{
-    position: relative;
-    left: 65%;
-    bottom: 400px;
+    position: absolute;
+    display: inline;
     width: 35%;
     font-size: 25px;
+    margin-right: 20px;
+    margin-left: 40px;
     text-align: justify;
 }
 input{
@@ -168,6 +233,16 @@ footer{
     background-color: #9b9898;
 }
 
+.QaA{
+    margin: 20px;
+    margin-left: 40px;
+    margin-bottom: 40px;
+}
+
+.Hilfe_Text{
+    margin: 15px;
+}
+
 @media(max-width: 1100px){
     
     .toggle_button{
@@ -192,6 +267,15 @@ footer{
     #toggle_button:checked ~ ul{
         display: block;
     }
+
+    summary{
+        font-size: 30px;
+    }
+
+    .QaA{
+        margin-left: 20px;
+    }
+
     .ein_beispiel{
         width: auto;
         height: auto;
@@ -233,5 +317,17 @@ footer{
         height: 900px;
         width: auto;
         background-color: #9b9898;
+    }
+    .Ersteindruck_Bild{
+        width: 0%;
+    }
+    .Ersteindruck_Text{
+        left: 0px;
+        margin-top: 20%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30%;
+        width: 100%;
+        text-align: center;
     }
 }
