@@ -124,6 +124,9 @@ summary:before {
     transform: rotate(90deg);
   }
 
+  form{
+    height: 100px;
+  }
 
 .Ersteindruck{
     width: auto;
