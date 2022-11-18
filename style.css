@@ -165,7 +165,14 @@ summary:before {
     margin-left: 20px;
     margin-right: 20px;
     margin-bottom: 30px;
+    margin-top: 20px;
 }
+
+.AngebotSticker{
+    padding: 10px 0px 10px 0px;
+    text-align: center;
+}
+
 .beispiel_bild{
     width: 100%;
     height: auto;
