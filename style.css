@@ -159,7 +159,7 @@ summary:before {
 }
 .ein_beispiel{
     
-    width: 400px;
+    width: 25%;
     height: auto;
     display: inline-block;
     padding: 20px;
@@ -167,8 +167,8 @@ summary:before {
     margin-right: 20px;
 }
 .beispiel_bild{
-    width: 400px;
-    height: 300px;
+    width: 100%;
+    height: auto;
 }
 .wir{
     width: auto;
