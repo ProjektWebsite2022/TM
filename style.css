@@ -13,7 +13,7 @@ body{
 }
 header{
     width: 100%;
-    height: 400px;
+    height: 700px;
     background-image: url("Bilder/Gruppenbild.jpg");
     background-size: cover;
     background-attachment: fixed;
@@ -136,7 +136,7 @@ summary:before {
 
 .Ersteindruck_Bild{
     position: relative;
-    left: 60%;
+    left: 57%;
     bottom: 220px;
     width: 40%;
 }
@@ -146,7 +146,7 @@ summary:before {
     left: 10px;
     font-weight: bold;
     font-size: 50px;
-    width: 54%;
+    width: 50%;
     margin: 200px 20px 30px 40px;
 }
 
@@ -158,13 +158,13 @@ summary:before {
     margin-bottom: 30px;
 }
 .ein_beispiel{
-    
     width: 25%;
     height: auto;
     display: inline-block;
     padding: 20px;
     margin-left: 20px;
     margin-right: 20px;
+    margin-bottom: 30px;
 }
 .beispiel_bild{
     width: 100%;
@@ -230,6 +230,14 @@ input.toggle_button{
     text-decoration: none;
 }
 
+.Kontaktdaten{
+    color: #fffff9;
+    font-size: 24px;
+    display: block;
+    text-align: left;
+    text-decoration: none;
+}
+
 .Fußzeile ul li a:hover{
     text-decoration: underline #ebebeb solid;
 }
@@ -252,6 +260,16 @@ footer{
 
 input[type=text], select{
     width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=number], select{
+    width: 25%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
@@ -321,6 +339,10 @@ input{
         display: block;
     }
 
+    header{
+        height: 500px;
+    }
+
     summary{
         font-size: 30px;
     }
@@ -382,5 +404,8 @@ input{
         margin-bottom: 30%;
         width: 100%;
         text-align: center;
+    }
+    .Ersteindruck{
+        height: 400px;
     }
 }
