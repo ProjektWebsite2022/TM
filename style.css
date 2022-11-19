@@ -460,9 +460,22 @@ input{
     .info{
         float: none;
         width: 100%;
-        margin-right: 0px;
+        padding: 0px;
+        margin: 0px;
+
     }
     .Teilnehmerbild{
         width: 100%;
     }
+    .Teilnehmer.div{
+        margin: 0;
+        width: auto;
+    }
+    .Teilnehmertext{
+        margin: 0;
+    }
+    .Suh{
+        margin: 10px 0px 10px 0px;
+    }
+    
 }
