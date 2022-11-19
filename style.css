@@ -334,7 +334,7 @@ input{
     margin: 10px;
 }
 .Teilnehmer.div {
-    width: 100%;
+    width: auto;
     height: auto;
     padding: 10px;
     margin: 1cm;
@@ -470,12 +470,23 @@ input{
     .Teilnehmer.div{
         margin: 0;
         width: auto;
+        padding-bottom: 40px;
     }
     .Teilnehmertext{
         margin: 0;
+        text-align: justify;
+        padding-left: 30px;
+        padding-right: 30px;
     }
     .Suh{
         margin: 10px 0px 10px 0px;
+    }
+    .Einleitung{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .Name{
+        padding-left: 20px;
     }
     
 }
