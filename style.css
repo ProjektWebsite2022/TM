@@ -320,11 +320,47 @@ select{
 input{
     font-size: 20px;
 }
-
-.über uns text {
+.einsbild{
+    width: 100%;
+    height:auto ;
+}
+.Suh {
+    text-align: center;
+}
+.Einleitung{
+    padding: 60px;
+    text-align: justify;
+    padding-top: 30px;
+    margin: 10px;
+}
+.Teilnehmer.div {
     width: 100%;
     height: auto;
     padding: 10px;
+    margin: 1cm;
+}
+.über.uns.text {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+}
+.Teilnehmerbild{
+    width: 50%;
+    height: auto;
+}
+.info{
+    width: 40%;
+    float: right;
+    padding: 20px;
+    margin: 10px;
+}
+
+.Name{
+    margin-left: 0%;
+}
+
+.Teilnehmertext{
+    margin-left: 5%;
 }
 
 @media(max-width: 1100px){
@@ -420,5 +456,13 @@ input{
     }
     .Ersteindruck{
         height: 400px;
+    }
+    .info{
+        float: none;
+        width: 100%;
+        margin-right: 0px;
+    }
+    .Teilnehmerbild{
+        width: 100%;
     }
 }
