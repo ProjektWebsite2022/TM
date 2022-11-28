@@ -2,18 +2,19 @@
     margin: 0;
     padding: 0;
 }
+@import url(Schriftarten/Amiri_Quran/AmiriQuran-Regular.ttf);
 html{
     height: 100%;
 }
 body{
     height: auto;   
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #e1e1e1;
+    font-family: AmiriQuran-Regular, sans-serif;
+    background-color: #fffff9;
 }
 header{
     width: 100%;
-    height: 400px;
-    background-image: url("Bilder/Gruppenbild.jpg");
+    height: 700px;
+    background-image: url("Bilder/firework.jpg");
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -28,7 +29,7 @@ header{
 nav{
     height: 90px;
     width: 100%;
-    background-color: white;
+    background-color: #fffff9;
     box-shadow: 0px 2px 4px rgba(0,0,0,0.144);
     position: fixed;
     margin-right: 20px;
@@ -42,7 +43,7 @@ nav li{
     margin-right: 20px;
 }
 nav li a{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: AmiriQuran-Regular, sans-serif;
     font-size: 24px;
     color:#333;
     text-decoration: none;
@@ -50,15 +51,14 @@ nav li a{
     display: block;
 }
 nav li a.active{
-    color: cornflowerblue;
+    color: goldenrod;
 }
 nav ul li a:hover{
-    background-color: #ebebeb;
+    background-color: #f0ecec;
 }
 .toggle_button{
     width: 30px;
     height: 23px;
-
     position: absolute;
     top: 25px;
     right: 25px;
@@ -78,14 +78,13 @@ p{
 
 }
 h1{
-    color: cornflowerblue;
+    color: goldenrod;
     margin-left: 20px;
     margin-top: 40px;
     margin-bottom: 30px;
     margin-right: 0px;
     padding: auto;
 }
-
 details {
     width: 100%;
     margin-right: 10px;
@@ -95,7 +94,6 @@ details {
     border-radius: 5px;
     overflow: hidden;
   }
-
 summary{
     font-size: 50px;
     color: rgb(245, 241, 241);
@@ -106,7 +104,6 @@ summary{
     padding-left: 20px;
     cursor: pointer;
 }
-
 summary:before {
     content: '';
     border-width: .4rem;
@@ -119,15 +116,14 @@ summary:before {
     transform-origin: .2rem 50%;
     transition: .25s transform ease;
   }
-
   details[open] > summary:before {
     transform: rotate(90deg);
   }
-
   form{
     height: 100px;
   }
 
+/*Startseite*/
 .Ersteindruck{
     width: auto;
     height: 550px;
@@ -136,7 +132,7 @@ summary:before {
 
 .Ersteindruck_Bild{
     position: relative;
-    left: 60%;
+    left: 57%;
     bottom: 220px;
     width: 40%;
 }
@@ -146,7 +142,7 @@ summary:before {
     left: 10px;
     font-weight: bold;
     font-size: 50px;
-    width: 56%;
+    width: 50%;
     margin: 200px 20px 30px 40px;
 }
 
@@ -158,18 +154,30 @@ summary:before {
     margin-bottom: 30px;
 }
 .ein_beispiel{
-    
     width: 25%;
     height: auto;
     display: inline-block;
     padding: 20px;
     margin-left: 20px;
     margin-right: 20px;
+    margin-bottom: 30px;
+    margin-top: 20px;
 }
+
+.AngebotSticker{
+    padding: 10px 0px 10px 0px;
+    text-align: center;
+}
+
 .beispiel_bild{
     width: 100%;
     height: auto;
 }
+.beispiel_bild:hover{
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    transform: scale(1.1);
+} 
 .wir{
     width: auto;
     height: auto;
@@ -200,7 +208,7 @@ input.toggle_button{
 #toggle_button{
     visibility: hidden;
 }
-
+/*Fußzeile*/
 .Fußzeile{
     height: auto;
     width: 27%;
@@ -216,14 +224,22 @@ input.toggle_button{
 }
 
 .Fußzeile li h1{
-    color: #e0d8d8;
+    color: #fffff9;
     font-size: 44px;
     margin-left: 0px;
     margin-bottom: 30px;
 }
 
 .Fußzeile li a{
-    color: #e0d8d8;
+    color: #fffff9;
+    font-size: 24px;
+    display: block;
+    text-align: left;
+    text-decoration: none;
+}
+
+.Kontaktdaten{
+    color: #fffff9;
     font-size: 24px;
     display: block;
     text-align: left;
@@ -237,7 +253,7 @@ input.toggle_button{
 footer{
     height: 400px;
     width: auto;
-    background-color: #9b9898;
+    background-color: #747272;
 }
 
 .QaA{
@@ -249,24 +265,19 @@ footer{
 .Hilfe_Text{
     margin: 15px;
 }
-/*
-form{
-    padding: 10px;
-    margin: 20px;
-    z-index: 10;
-    background-color: aliceblue;
-}
-
-input{
-    width: 100%;
-    border: 2px solid #333;
-    z-index: 10;
-    background-color: #333;
-}
-*/
-
+/*Kontakt*/
 input[type=text], select{
     width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=number], select{
+    width: 25%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
@@ -280,7 +291,7 @@ input[type=text], select{
     padding: 20px;
     margin: 40px auto 20px auto;
     border-radius: 4px;
-    background-color: rgb(243, 248, 246);
+    background-color: #cbc8bc;
 }
 
 form{
@@ -288,7 +299,7 @@ form{
 }
 
 button{
-    background-color: #00c2ff;
+    background-color: red;
     border-radius: 20px;
     padding: 10px;
     width: auto;
@@ -297,6 +308,23 @@ button{
     font-size: 25px;
 }
 
+button:hover{
+    background-color: #8afe60;
+}
+
+button:active{
+    transform: translateY(4px);
+    background-color: #8afe60;
+}
+.Absenden{
+    display: inline;
+}
+p.Absenden{
+    font-size: 15px;
+    color: red;
+    padding: 10px;
+    margin-left: 30px;
+}
 label{
     font-size: 30px;
 }
@@ -309,6 +337,87 @@ select{
 
 input{
     font-size: 20px;
+}
+/*Über uns*/
+.einsbild{
+    width: 100%;
+    height:auto ;
+}
+.Suh {
+    text-align: center;
+}
+.Einleitung{
+    padding: 60px;
+    text-align: justify;
+    padding-top: 30px;
+    margin: 10px;
+}
+.Teilnehmer.div {
+    width: auto;
+    height: auto;
+    padding: 10px;
+    margin: 1cm;
+}
+.über.uns.text {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+}
+.Teilnehmerbild{
+    width: 50%;
+    height: auto;
+}
+.info{
+    width: 40%;
+    float: right;
+    padding: 20px;
+    margin: 10px;
+}
+
+.Name{
+    margin-left: 0%;
+}
+
+.Teilnehmertext{
+    margin-left: 5%;
+}
+/*Galerie*/
+
+.Galleriebild2{
+    display: inline;
+    width: 30%;
+    border-radius: 100%;
+    margin: 1.5%;
+}
+.Einblick{
+    margin: 10px;
+    padding: 5px;
+}
+.Hoch{
+    margin-left: 30px;
+    margin-right: 5%;
+    text-align: justify;
+}
+.klasse{
+    margin: 15px;
+    padding-bottom: 30px;
+}
+.kBild{
+    width: 29%;
+    height: 250px;
+    padding: 10px;
+    margin-left: 15px;
+    display: inline;
+}
+.kBild:hover{
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    transform: scale(1.1);
+} 
+
+.kBeschreibung{
+    padding-left: 20px;
+    margin: 10px;
 }
 
 /*Angebot*/
@@ -366,6 +475,10 @@ input{
     }
     #toggle_button:checked ~ ul{
         display: block;
+    }
+
+    header{
+        height: 500px;
     }
 
     summary{
@@ -430,4 +543,74 @@ input{
         width: 100%;
         text-align: center;
     }
+    .Ersteindruck{
+        height: 400px;
+    }
+    .info{
+        float: none;
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+
+    }
+    .Teilnehmerbild{
+        width: 100%;
+    }
+    .Teilnehmer.div{
+        margin: 0;
+        width: auto;
+        padding-bottom: 40px;
+    }
+    .Teilnehmertext{
+        margin: 0;
+        text-align: justify;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .Suh{
+        margin: 10px 0px 10px 0px;
+    }
+    .Einleitung{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .Name{
+        padding-left: 20px;
+    }
+    label{
+        font-size: 20px;
+    }
+    button{
+        font-size: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .Absenden{
+        display: block;
+    }
+    p.Absenden{
+        margin-top: 17px;
+        margin-left: 0px;
+        text-align: justify;
+    }
+ /*Galerie*/
+    .Galleriebild2{
+        display: none;
+    }
+
+    .kBild{
+        width: 90%;
+        padding: 5%;
+        margin-left: 0px;
+        display: center;
+    }
+    .kBeschreibung{
+        padding-left: 20px;
+        margin: 10px;
+    }
+    .kUe{
+        margin-left: 0px;
+        text-align: center;
+    }
+    
 }
