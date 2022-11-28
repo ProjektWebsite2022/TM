@@ -311,6 +311,38 @@ input{
     font-size: 20px;
 }
 
+/*Angebot*/
+
+.Informationstext{
+    margin-bottom: 10px;
+    margin-top: 10px;
+    width: 90%;
+    margin-left: 5%;
+    margin-inline-end: 20px;
+    font-size: larger;
+
+}
+
+.Schreib_uns{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: -webkit-box;
+    box-sizing: border-box;
+    border: cornflowerblue 4px;
+    width: 30%;
+    
+}
+
+.Hochzeitsbild{
+    position: relative;
+    left: 10px;
+    width: 60%;
+    margin-bottom: 10px;
+    margin: auto;
+    margin-left: 19%;
+}
+
+
 @media(max-width: 1100px){
     
     .toggle_button{
