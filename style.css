@@ -122,6 +122,8 @@ summary:before {
   form{
     height: 100px;
   }
+
+/*Startseite*/
 .Ersteindruck{
     width: auto;
     height: 550px;
@@ -201,7 +203,7 @@ input.toggle_button{
 #toggle_button{
     visibility: hidden;
 }
-
+/*Fußzeile*/
 .Fußzeile{
     height: auto;
     width: 27%;
@@ -258,7 +260,7 @@ footer{
 .Hilfe_Text{
     margin: 15px;
 }
-
+/*Kontakt*/
 input[type=text], select{
     width: 100%;
     padding: 12px 20px;
@@ -331,6 +333,7 @@ select{
 input{
     font-size: 20px;
 }
+/*Über uns*/
 .einsbild{
     width: 100%;
     height:auto ;
@@ -375,17 +378,18 @@ input{
 }
 /*Galerie*/
 
-.Hochzeitsbild2{
-    width: 50%;
-    margin-left: 25%;
-    margin-right: 25%;
+.Galleriebild2{
+    display: inline;
+    width: 30%;
+    border-radius: 100%;
+    margin: 1.5%;
 }
 .Einblick{
     margin: 10px;
     padding: 5px;
 }
 .Hoch{
-    margin-left: 5%;
+    margin-left: 30px;
     margin-right: 5%;
     text-align: justify;
 }
@@ -395,6 +399,7 @@ input{
 }
 .kBild{
     width: 29%;
+    height: 250px;
     padding: 10px;
     margin-left: 15px;
     display: inline;
@@ -552,11 +557,10 @@ input{
         text-align: justify;
     }
  /*Galerie*/
-    .Hochzeitsbild2{
-        width: 90%;
-        margin-left: 5%;
-        margin-right: 5%;
+    .Galleriebild2{
+        display: none;
     }
+
     .kBild{
         width: 90%;
         padding: 5%;
