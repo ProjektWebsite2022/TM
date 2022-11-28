@@ -173,6 +173,11 @@ summary:before {
     width: 100%;
     height: auto;
 }
+.beispiel_bild:hover{
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    transform: scale(1.1);
+} 
 .wir{
     width: auto;
     height: auto;
