@@ -54,7 +54,7 @@ nav li a.active{
     color: goldenrod;
 }
 nav ul li a:hover{
-    background-color: #f0ecec;
+    background-color: #ffcc017b;
 }
 .toggle_button{
     width: 30px;
@@ -90,15 +90,15 @@ details {
     margin-right: 10px;
     background: #d4cccc;
     margin-bottom: .5rem;
-    box-shadow: 0 .1rem 1rem -.5rem rgba(0,0,0,.4);
+    box-shadow: 0 .1rem 1rem -.5rem #00000066;
     border-radius: 5px;
     overflow: hidden;
   }
 summary{
     font-size: 50px;
-    color: rgb(245, 241, 241);
+    color: #f5f1f1;
     display: block;
-    background-color: rgb(126, 123, 123);
+    background-color: #e4a72d;
     border-radius: 5px;
     padding: 10px;
     padding-left: 20px;
@@ -122,10 +122,13 @@ summary:before {
   form{
     height: 100px;
   }
+
+/*Startseite*/
 .Ersteindruck{
     width: auto;
     height: 550px;
     padding: 10px;
+    margin: 0px 30px 0px 30px;
 }
 
 .Ersteindruck_Bild{
@@ -141,7 +144,7 @@ summary:before {
     font-weight: bold;
     font-size: 50px;
     width: 50%;
-    margin: 200px 20px 30px 40px;
+    margin: 200px 0px 0px 20px;
 }
 
 .alle_beispiele{
@@ -171,11 +174,16 @@ summary:before {
     width: 100%;
     height: auto;
 }
+.beispiel_bild:hover{
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    transform: scale(1.1);
+} 
 .wir{
     width: auto;
     height: auto;
     padding: 20px;
-    margin-left: 50px;
+    margin-left: 70px;
     margin-right: 50px;
     margin-bottom: 50px;
 }
@@ -188,10 +196,10 @@ summary:before {
 .wir_text{
     position: absolute;
     display: inline;
-    width: 35%;
+    width: 30%;
     font-size: 25px;
-    margin-right: 20px;
-    margin-left: 40px;
+    margin-right: 0px;
+    margin-left: 60px;
     text-align: justify;
 }
 input.toggle_button{
@@ -201,7 +209,7 @@ input.toggle_button{
 #toggle_button{
     visibility: hidden;
 }
-
+/*Fußzeile*/
 .Fußzeile{
     height: auto;
     width: 27%;
@@ -258,7 +266,7 @@ footer{
 .Hilfe_Text{
     margin: 15px;
 }
-
+/*Kontakt*/
 input[type=text], select{
     width: 100%;
     padding: 12px 20px;
@@ -284,7 +292,7 @@ input[type=number], select{
     padding: 20px;
     margin: 40px auto 20px auto;
     border-radius: 4px;
-    background-color: #cbc8bc;
+    background-color: #ffcc00;
 }
 
 form{
@@ -314,7 +322,7 @@ button:active{
 }
 p.Absenden{
     font-size: 15px;
-    color: red;
+    color: #ff0000;
     padding: 10px;
     margin-left: 30px;
 }
@@ -331,6 +339,7 @@ select{
 input{
     font-size: 20px;
 }
+/*Über uns*/
 .einsbild{
     width: 100%;
     height:auto ;
@@ -375,17 +384,21 @@ input{
 }
 /*Galerie*/
 
-.Hochzeitsbild2{
-    width: 50%;
-    margin-left: 25%;
-    margin-right: 25%;
+.Galleriebild2{
+    width: 29%;
+    height: 250px;
+    padding: 10px;
+    margin-left: 15px;
+    margin-top: 30px;
+    display: inline;
+    border-radius: 100%;
 }
 .Einblick{
     margin: 10px;
     padding: 5px;
 }
 .Hoch{
-    margin-left: 5%;
+    margin-left: 30px;
     margin-right: 5%;
     text-align: justify;
 }
@@ -395,6 +408,7 @@ input{
 }
 .kBild{
     width: 29%;
+    height: 250px;
     padding: 10px;
     margin-left: 15px;
     display: inline;
@@ -409,6 +423,60 @@ input{
     padding-left: 20px;
     margin: 10px;
 }
+
+/*Angebot*/
+
+.Informationstext{
+    margin-bottom: 10px;
+    margin-top: 10px;
+    width: 100%;
+    margin-inline-end: 20px;
+    font-size: larger;
+}
+
+p.Infotext{
+    margin: 0px 40px 0px 40px;
+}
+
+a.Schreib_uns{
+    margin: 0px 40px 0px 40px;
+}
+
+.Schreib_uns{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: -webkit-box;
+    box-sizing: border-box;
+    border: cornflowerblue 4px;
+    width: 30%;
+    
+}
+
+.Hochzeitsbild{
+    position: relative;
+    left: 10px;
+    width: 60%;
+    margin-bottom: 10px;
+    margin: auto;
+    margin-left: 19%;
+}
+/* Formular abgegeben*/
+.Angebotabgegeben{
+    margin: 30px 30px 0px 30px;
+    padding: 30px;
+    background-color: #f4ae15;
+}
+.AngebotabgegebenBild{
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin: 0px auto 30px auto;
+}
+a.AngebotabgegebenZurück{
+    font-style: none;
+    font-size: large;
+}
+
 
 @media(max-width: 1100px){
     
@@ -552,11 +620,10 @@ input{
         text-align: justify;
     }
  /*Galerie*/
-    .Hochzeitsbild2{
-        width: 90%;
-        margin-left: 5%;
-        margin-right: 5%;
+    .Galleriebild2{
+        display: none;
     }
+
     .kBild{
         width: 90%;
         padding: 5%;
