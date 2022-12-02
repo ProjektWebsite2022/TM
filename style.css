@@ -429,11 +429,17 @@ input{
 .Informationstext{
     margin-bottom: 10px;
     margin-top: 10px;
-    width: 90%;
-    margin-left: 5%;
+    width: 100%;
     margin-inline-end: 20px;
     font-size: larger;
+}
 
+p.Infotext{
+    margin: 0px 40px 0px 40px;
+}
+
+a.Schreib_uns{
+    margin: 0px 40px 0px 40px;
 }
 
 .Schreib_uns{
