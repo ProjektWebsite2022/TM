@@ -354,6 +354,7 @@ input{
     margin: 10px;
 }
 .Teilnehmer.div {
+    box-shadow: 10px 20px 15px #d4cfcf;
     width: auto;
     height: auto;
     padding: 10px;
