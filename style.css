@@ -640,5 +640,9 @@ a.AngebotabgegebenZurück{
         margin-left: 0px;
         text-align: center;
     }
+    /*Angebot*/
+    a.Schreib_uns{
+        font-size: 20px;
+    }
     
 }
