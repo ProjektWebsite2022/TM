@@ -542,11 +542,12 @@ a.AngebotabgegebenZurück{
         text-orientation: inherit;
     }
     .wir_text{
-        position: static;
-        left: 2%;
+       position: static;
+        display: block;
         width: 100%;
         font-size: 25px;
         text-align: justify;
+        margin: 0;
     }
     .Fußzeile{
         height: auto;
@@ -555,7 +556,7 @@ a.AngebotabgegebenZurück{
         margin: 0px;
     }
     footer{
-        height: 900px;
+        height: 1100px;
         width: auto;
         background-color: #9b9898;
     }
@@ -643,6 +644,9 @@ a.AngebotabgegebenZurück{
     /*Angebot*/
     a.Schreib_uns{
         font-size: 20px;
+    }
+    p.Infotext{
+        text-align: justify;
     }
     
 }
