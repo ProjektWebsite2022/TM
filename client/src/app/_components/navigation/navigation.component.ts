@@ -1,6 +1,8 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
+import { CartItem } from 'src/app/_models/cartItem';
 import { Navigation } from 'src/app/_models/navigation';
+import { CartService } from 'src/app/_services/cart.service';
 
 @Component({
   selector: 'app-navigation',
@@ -14,8 +16,8 @@ export class NavigationComponent implements OnInit {
 
   navigation: Navigation[] = [
     {
-      name: 'Produkte',
-      routerLink: '',
+      name: 'Veranstaltungen',
+      routerLink: '/events',
       isOpened: false,
       subNav: [],
       //[
@@ -70,21 +72,12 @@ export class NavigationComponent implements OnInit {
     // },
     {
       name: 'Über uns',
-      routerLink: `/about-us`,
-    },
-    {
-      name: 'Referenzen',
-      routerLink: `/references`
-    },
-    {
-      name: 'Inside',
-      routerLink: `/inside-alternavest`,
-    },
-    {
-      name: 'Karriere',
-      routerLink: `/careers`,
+      routerLink: `/ueber-uns`,
     },
   ];
+
+
+  cart: CartItem[];
 
 
 
@@ -93,6 +86,7 @@ export class NavigationComponent implements OnInit {
   constructor(
 
     private router: Router,
+    private cartService: CartService
 
   ) {
     this.router.events.subscribe((data: any) => {
@@ -101,6 +95,7 @@ export class NavigationComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.cart = this.cartService.getCart();
   }
 
 
