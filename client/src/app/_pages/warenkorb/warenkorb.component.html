@@ -30,7 +30,7 @@
                             </h3>
                           </div>
     
-                          <p class="text-right text-sm font-medium text-gray-900">{{ cartItem.product.price }} €</p>
+                          <p class="text-right text-sm font-medium text-gray-900">{{ (cartItem.product.price / 100).toFixed(2) }} €</p>
                         </div>
     
                         <div class="mt-4 flex items-center sm:absolute sm:left-1/2 sm:top-0 sm:mt-0 sm:block">
@@ -74,25 +74,21 @@
                     <dl class="-my-4 divide-y divide-gray-200 text-sm">
                       <div class="flex items-center justify-between py-4">
                         <dt class="text-gray-600">Zwischensumme</dt>
-                        <dd class="font-medium text-gray-900">{{ finalPrice.toFixed(2) }} €</dd>
+                        <dd class="font-medium text-gray-900">{{ (finalPrice / 100).toFixed(2) }} €</dd>
                       </div>
                       <div class="flex items-center justify-between py-4">
                         <dt class="text-gray-600">Lieferung</dt>
-                        <dd class="font-medium text-gray-900">{{deliveryPrice.toFixed(2)}} €</dd>
-                      </div>
-                      <div class="flex items-center justify-between py-4">
-                        <dt class="text-gray-600">Steuern ({{ taxes.toFixed(0) }} %)</dt>
-                        <dd class="font-medium text-gray-900">{{ (finalPrice *  (taxes / 100)).toFixed(2) }}</dd>
+                        <dd class="font-medium text-gray-900">Kostenlose Lieferung</dd>
                       </div>
                       <div class="flex items-center justify-between py-4">
                         <dt class="text-base font-medium text-gray-900">Bestellung gesamt</dt>
-                        <dd class="text-base font-medium text-gray-900">{{ finalPriceTaxed.toFixed(2) }} €</dd>
+                        <dd class="text-base font-medium text-gray-900">{{ (finalPrice / 100).toFixed(2) }} €</dd>
                       </div>
                     </dl>
                   </div>
                 </div>
                 <div class="mt-10">
-                  <button type="submit" class="w-full rounded-md border border-transparent bg-indigo-600 px-4 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50">Jetzt bestellen</button>
+                  <button (click)="processPayment()" class="w-full rounded-md border border-transparent bg-indigo-600 px-4 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50">Jetzt bestellen</button>
                 </div>
     
                 <div class="mt-6 text-center text-sm text-gray-500">

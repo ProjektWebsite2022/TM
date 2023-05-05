@@ -11,8 +11,6 @@ export class EventsComponent implements OnInit {
 
   events: Event[] = events;
 
-  isEventSearchOpen: boolean = false;
-
   constructor() { }
 
   ngOnInit(): void {

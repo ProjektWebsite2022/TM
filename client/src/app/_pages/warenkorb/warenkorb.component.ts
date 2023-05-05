@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { CartItem } from 'src/app/_models/cartItem';
 import { Event } from 'src/app/_models/events';
 import { CartService } from 'src/app/_services/cart.service';
+const stripe = require('stripe')('sk_test_51N4H04E6HRSadoukZmnWR4QOXSLMpLA8K38JEak15afw1zih8k8MUgtcoiPONmVlwVOb1zBz6JoITxqAKs68olYV004dkEq1qq')
 
 @Component({
   selector: 'app-warenkorb',
@@ -13,13 +15,12 @@ export class WarenkorbComponent implements OnInit {
   cart: CartItem[];
 
 
-  deliveryPrice: number = 5;
   taxes: number = 19;
   finalPrice: number = 0;
-  finalPriceTaxed: number = 0;
 
   constructor(
-    private cartService: CartService
+    private cartService: CartService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -28,11 +29,10 @@ export class WarenkorbComponent implements OnInit {
 
   public getCart() {
     this.cart = this.cartService.getCart();
-    this.finalPrice = this.finalPriceTaxed = 0;
+    this.finalPrice = 0;
 
     this.cart.forEach(element => {
       this.finalPrice += element.amount * element.product.price;
-      this.finalPriceTaxed = this.finalPrice * (1 + (this.taxes / 100)) + this.deliveryPrice;
     })
   }
 
@@ -47,6 +47,45 @@ export class WarenkorbComponent implements OnInit {
   public deleteFromCart(productId: number) {
     this.cartService.deleteFromCart(productId);
     this.getCart();
+  }
+
+  public async processPayment() {
+    console.log('processing payment');
+
+    // line Items erstellen.
+    let lineItems = []; 
+
+    for (let cartItem of this.cart) {
+      lineItems.push({
+        price_data: {
+          currency: 'eur',
+          tax_behavior: 'exclusive',
+          product_data: {
+            name: cartItem.product.name,
+          },
+          unit_amount: cartItem.product.price,
+        },
+        adjustable_quantity: {
+          enabled: true,
+          minimum: 1,
+          maximum: 10,
+        },
+        quantity: cartItem.amount,
+      })
+    }
+
+    // hier stripe checkout aufrufen
+    const session = await stripe.checkout.sessions.create({
+      line_items: lineItems,
+      mode: 'payment',
+      success_url: 'http://localhost:4200/buchungsbestaetigung',
+      cancel_url: 'http://localhost:4200/warenkorb',
+    });
+    
+
+    window.location.href = session.url;
+
+    
   }
 
 }

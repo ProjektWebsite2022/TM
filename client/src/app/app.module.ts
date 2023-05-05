@@ -22,6 +22,7 @@ import { TeamComponent } from './_components/team/team.component';
 import { FooterComponent } from './_components/footer/footer.component';
 import { LogoCloudComponent } from './_components/logo-cloud/logo-cloud.component';
 import { WarenkorbComponent } from './_pages/warenkorb/warenkorb.component';
+import { BuchungsbestaetigungComponent } from './_pages/buchungsbestaetigung/buchungsbestaetigung.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { WarenkorbComponent } from './_pages/warenkorb/warenkorb.component';
     FooterComponent,
     LogoCloudComponent,
     WarenkorbComponent,
+    BuchungsbestaetigungComponent,
   ],
   imports: [
     BrowserModule,
