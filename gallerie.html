@@ -6,29 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Timo macht's Gallerie</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <style>nav li a.Gallerie{
+      color: goldenrod;
+  }</style>
   </head>
   <body>
-    <header>
-      <nav>
-        <a href="index.html">
-          <img class="logo" src="Bilder/logo.png" alt="logo"
-        /></a>
-        <input type="checkbox" id="toggle_button" />
-        <label for="toggle_button" class="toggle_button">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </label>
-        <ul>
-          <li><a href="index.html"> Startseite</a></li>
-          <li><a href="angebot.html"> Angebot</a></li>
-          <li><a href="ueber_uns.html"> Über uns</a></li>
-          <li><a class="active" href="gallerie.html"> Gallerie</a></li>
-          <li><a href="kontakt.html"> Kontakt</a></li>
-        </ul>
-      </nav>
-    </header>
-    <div class="Hochzeitsbild2div">
+
+    <div id="app">
+      <my-header></my-header>
+
+      <div class="Hochzeitsbild2div">
       <img
         class="Galleriebild2"
         src="Bilder/PixaBay/Geburtstag1.jpg"
@@ -44,8 +32,8 @@
         src="Bilder/PixaBay/Hochzeit3.jpg"
         alt="Hochzeit"
       />
-    </div>
-    <div class="Einblick">
+      </div>
+      <div class="Einblick">
       <h1 class="Einblickh1">Einblick in unsere Veranstaltungen</h1>
       <p class="Hoch">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nostrum
@@ -53,8 +41,8 @@
         Voluptatum porro, ex veniam labore aspernatur ab hic qui ipsum autem
         maiores.
       </p>
-    </div>
-    <div class="klasse">
+      </div>
+      <div class="klasse">
       <h1 class="kUe">Hochzeitsausschnitte</h1>
       <img class="kBild" src="Bilder/PixaBay/Hochzeit1.jpg" alt="Hochzeit" />
       <img class="kBild" src="Bilder/PixaBay/Hochzeit2.jpg" alt="Hochzeit" />
@@ -62,8 +50,8 @@
       <p class="kBeschreibung">
         Konzentrieren Sie sich auf das Wesentliche, den Rest übernehmen wir!
       </p>
-    </div>
-    <div class="klasse">
+      </div>
+      <div class="klasse">
       <h1 class="kUe">Weihnachtsfeier</h1>
       <img
         class="kBild"
@@ -83,8 +71,8 @@
       <p class="kBeschreibung">
         Ohne Organisationsstress ein schönes Fest verbringen!
       </p>
-    </div>
-    <div class="klasse">
+      </div>
+      <div class="klasse">
       <h1 class="kUe">Party</h1>
       <img class="kBild" src="Bilder/PixaBay/Party1.jpg" alt="Party" />
       <img class="kBild" src="Bilder/PixaBay/Party2.jpg" alt="Party" />
@@ -92,44 +80,11 @@
       <p class="kBeschreibung">
         Ohne Organisationsstress eine schöne Feier erleben!
       </p>
-    </div>
-    <footer>
-      <div class="Fußzeile">
-        <ul>
-          <li>
-            <h1>Über Uns</h1>
-            <ul>
-              <li><a href="ueber_uns.html">Unser Unternehmen</a></li>
-              <li><a href="Q+A.html#AGB">AGB</a></li>
-            </ul>
-          </li>
-        </ul>
       </div>
-      <div class="Fußzeile">
-        <ul>
-          <li>
-            <h1>Kundenservice</h1>
-            <ul>
-              <li><a href="Q+A.html#Hilfe">Hilfe</a></li>
-              <li><a href="kontakt.html">Kontakt</a></li>
-              <li><p class="Kontaktdaten">Tel.: +49 170 6378290</p></li>
-              <li><p class="Kontaktdaten">E-Mail: TimoMachts@TM.com</p></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-      <div class="Fußzeile">
-        <ul>
-          <li>
-            <h1>Buchung</h1>
-            <ul>
-              <li><a href="Q+A.html#Benutzerdaten">Benutzerdaten</a></li>
-              <li><a href="Q+A.html#Buchung">Fragen zur Buchung</a></li>
-              <li><a href="Q+A.html#Bezahlmethoden">Bezahlen</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </footer>
+
+      <my-footer></my-footer>
+  </div>
+
+  <script src="app.js"></script>
   </body>
 </html>

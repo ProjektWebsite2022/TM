@@ -34,12 +34,13 @@ app.component('my-header', {
       <a href="index.html">
         <img class="logo" src="Bilder/logo.png" alt="logo"
       /></a>
-      <input type="checkbox" id="toggle_button" />
-      <label for="toggle_button" class="toggle_button">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
+      <input type="checkbox" id="checkbox">
+      <label for="checkbox" class="toggle">
+          <div class="bars" id="bar1"></div>
+          <div class="bars" id="bar2"></div>
+          <div class="bars" id="bar3"></div>
       </label>
+      
       <ul>
         <li><a class="Startseite" href="index.html"> Startseite</a></li>
         <li><a class="Angebot" href="angebot.html"> Angebot</a></li>

@@ -56,22 +56,59 @@ nav li a.active{
 nav ul li a:hover{
     background-color: #ffcc017b;
 }
-.toggle_button{
-    width: 30px;
-    height: 23px;
+
+#checkbox {
+    display: none;
+  }
+  
+  .toggle {
     position: absolute;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition-duration: .3s;
     top: 25px;
     right: 25px;
     display: none;
-    flex-direction: column;
-    justify-content: space-between;
-}
-.bar{
-    height: 4px;
+  }
+  
+  .bars {
     width: 100%;
-    background: #333;
-    border-radius: 100px;
-}
+    height: 4px;
+    background-color: #f4ae15;
+    border-radius: 5px;
+    transition-duration: .3s;
+  }
+  
+  #checkbox:checked + .toggle .bars {
+    margin-left: 13px;
+  }
+  
+  #checkbox:checked + .toggle #bar2 {
+    transform: rotate(135deg);
+    margin-left: 0;
+    transform-origin: center;
+    transition-duration: .3s;
+  }
+  
+  #checkbox:checked + .toggle #bar1 {
+    transform: rotate(45deg);
+    transition-duration: .3s;
+    transform-origin: left center;
+  }
+  
+  #checkbox:checked + .toggle #bar3 {
+    transform: rotate(-45deg);
+    transition-duration: .3s;
+    transform-origin: left center;
+  }
+
+
 p{
     font-size: 25px;
     text-align: left;
@@ -122,6 +159,8 @@ summary:before {
   form{
     height: 100px;
   }
+
+
 
 /*Startseite*/
 .Ersteindruck{
@@ -267,78 +306,55 @@ footer{
     margin: 15px;
 }
 /*Kontakt*/
-input[type=text], select{
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
+form { max-width:420px; margin:50px auto; }
+
+.feedback-input {
+  color:white;
+  font-weight:500;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border:2px solid #CC6666;
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 25px;
+  width:100%;
+  box-sizing: border-box;
+  outline:0;
 }
 
-input[type=number], select{
-    width: 25%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
+.feedback-input:focus { border:2px solid #CC4949; }
+
+textarea {
+  height: 150px;
+  line-height: 150%;
+  resize:vertical;
 }
 
-.Formular{
-    width: 80%;
-    padding: 20px;
-    margin: 40px auto 20px auto;
-    border-radius: 4px;
-    background-color: #ffcc00;
+[type="submit"] {
+  width: 100%;
+  background:#CC6666;
+  text-align: center;
+  border-radius:5px;
+  border:0;
+  cursor:pointer;
+  color:white;
+  font-size:24px;
+  padding-top:10px;
+  padding-bottom:10px;
+  transition: all 0.3s;
+  margin-top:-4px;
+  font-weight:700;
+  text-decoration: none;
 }
+[type="submit"]:hover { background:#CC4949; }
+
 
 form{
     height: inherit;
 }
 
-button{
-    background-color: red;
-    border-radius: 20px;
-    padding: 10px;
-    width: auto;
-    height: auto;
-    border-style: none;
-    font-size: 25px;
-}
-
-button:hover{
-    background-color: #8afe60;
-}
-
-button:active{
-    transform: translateY(4px);
-    background-color: #8afe60;
-}
-.Absenden{
-    display: inline;
-}
-p.Absenden{
-    font-size: 15px;
-    color: #ff0000;
-    padding: 10px;
-    margin-left: 30px;
-}
-label{
-    font-size: 30px;
-}
-
-select{
-    font-size: 20px;
-    width: 100%;
-    padding: 16px 20px;
-}
-
-input{
-    font-size: 20px;
-}
 /*Über uns*/
 .einsbild{
     width: 100%;
@@ -488,7 +504,7 @@ a.AngebotabgegebenZurück{
 
 @media(max-width: 1100px){
     
-    .toggle_button{
+    .toggle{
         display: flex;
     }
     nav ul{
@@ -507,7 +523,7 @@ a.AngebotabgegebenZurück{
         padding: 30px 0;
         margin-left: 20px;
     }
-    #toggle_button:checked ~ ul{
+    #checkbox:checked ~ ul{
         display: block;
     }
 
