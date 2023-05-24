@@ -163,6 +163,10 @@ summary:before {
 
 
 /*Startseite*/
+.Body{
+    margin-left: 10%;
+    margin-right: 10%;
+}
 .Ersteindruck{
     width: auto;
     height: 550px;
@@ -253,10 +257,9 @@ summary:before {
 .wir_text{
     position: absolute;
     display: inline;
-    width: 30%;
-    font-size: 25px;
-    margin-right: 0px;
-    margin-left: 60px;
+    width: 20%;
+    font-size: 1.2em;
+    margin-left: 5%;
     text-align: justify;
 }
 input.toggle_button{
