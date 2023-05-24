@@ -164,8 +164,8 @@ summary:before {
 
 /*Startseite*/
 .Body{
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 .Ersteindruck{
     width: auto;
@@ -214,8 +214,8 @@ summary:before {
 
 .slider{
     display: flex;
-    width: calc(450px * 6);
-    animation: runSlider 19s linear infinite;
+    width: calc(450px *6);
+    animation: runSlider 24s linear infinite;
 }
 
 @keyframes runSlider{
