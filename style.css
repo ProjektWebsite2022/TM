@@ -192,6 +192,9 @@ summary:before {
     text-align: center;
     margin: 6px;
     margin-bottom: 30px;
+    overflow: hidden;
+    display: grid;
+    
 }
 .ein_beispiel{
     width: 25%;
@@ -202,6 +205,21 @@ summary:before {
     margin-right: 20px;
     margin-bottom: 30px;
     margin-top: 20px;
+    perspective: 100px;
+}
+
+.slider{
+    display: flex;
+    width: calc(450px * 6);
+    animation: runSlider 19s linear infinite;
+}
+
+@keyframes runSlider{
+    from{
+        transform: translateX(0);
+    }to{
+        transform: translateX(calc(-450px * 3));
+    }
 }
 
 .AngebotSticker{
