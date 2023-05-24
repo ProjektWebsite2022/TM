@@ -212,19 +212,42 @@ summary:before {
     perspective: 100px;
 }
 
-.slider{
+.slider2{
     display: flex;
     width: calc(450px *6);
-    animation: runSlider 24s linear infinite;
+    animation: runSlider2 24s linear infinite;
 }
 
-@keyframes runSlider{
+@keyframes runSlider2{
     from{
         transform: translateX(0);
     }to{
         transform: translateX(calc(-450px * 3));
     }
 }
+
+
+.slider {
+    display: flex;
+    overflow: hidden; /* Verhindert das Überlaufen des Inhalts */
+    width: 100%; /* Breite eines Bildes */
+  }
+  
+  .slider img {
+ /* Füllt den verfügbaren Platz innerhalb des Sliders */
+    width: 400px;
+    animation: runSlider 24s linear infinite;
+  }
+  
+  @keyframes runSlider {
+    from{
+        transform: translateX(0);
+    }to{
+        transform: translateX(calc(-400px * 3));
+    }
+    
+  }
+  
 
 .AngebotSticker{
     padding: 10px 0px 10px 0px;
@@ -244,8 +267,10 @@ summary:before {
     width: auto;
     height: auto;
     padding: 20px;
-    margin-left: 70px;
-    margin-right: 50px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
     margin-bottom: 50px;
 }
 .wir_bild{
@@ -257,7 +282,7 @@ summary:before {
 .wir_text{
     position: absolute;
     display: inline;
-    width: 20%;
+    width: 30%;
     font-size: 1.2em;
     margin-left: 5%;
     text-align: justify;
