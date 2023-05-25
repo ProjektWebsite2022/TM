@@ -3,6 +3,8 @@
     padding: 0;
 }
 @import url(Schriftarten/Amiri_Quran/AmiriQuran-Regular.ttf);
+@import url("/TM/style2.css");
+
 html{
     height: 100%;
 }
@@ -545,6 +547,99 @@ a.Schreib_uns{
 a.AngebotabgegebenZurück{
     font-style: none;
     font-size: large;
+}
+
+/*CallToActionButton*/
+
+.example_g {
+    font-family: 'Poppins';
+    width: 75px;
+    height: 75px;
+    outline: none;
+    border-radius: 50%;
+    color: #494949;
+    background: #ffffff;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1;
+    transition: 0.5s ease-in-out;
+    animation: bouncing 5s infinite;
+}
+
+.CallToAction{
+    width: 71px;
+    height: 71px;
+}
+
+.example_g:before {
+    content: '';
+    background: linear-gradient(45deg, #FF0000, #FFF700, #FF7000, #FF00FE, #3FF4EB, #9E00FF, #00BEFF, #FF00DD, #FF0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    border-radius: 50%;
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+}
+
+.example_g:active {
+    color: #000
+}
+
+.example_g:active:after {
+    background: transparent;
+}
+
+.example_g:hover {
+    transform: scale(1.05);
+}
+
+.example_g:hover:before {
+    opacity: 1;
+}
+
+.example_g:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #ffffff;
+    left: 0;
+    top: 0;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+@keyframes bouncing {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
 
 
