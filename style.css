@@ -424,6 +424,14 @@ form{
     padding: 10px;
     margin: 1cm;
 }
+
+.Maps.div {
+    box-shadow: 10px 20px 15px #d4cfcf;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    margin: 1cm;
+}
 .über.uns.text {
     width: 100%;
     height: auto;
