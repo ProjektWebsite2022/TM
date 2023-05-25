@@ -3,7 +3,7 @@
     padding: 0;
 }
 @import url(Schriftarten/Amiri_Quran/AmiriQuran-Regular.ttf);
-@import url("/TM/style2.css");
+@import url(Schriftarten/Caveat/static/Caveat-Bold.ttf);
 
 html{
     height: 100%;
@@ -453,6 +453,7 @@ form{
 .Name{
     margin-left: 0%;
     margin-top: 5%;
+    font-family: Caveat-Bold, sans-serif;
 }
 
 .Teilnehmertext{
