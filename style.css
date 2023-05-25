@@ -2,9 +2,19 @@
     margin: 0;
     padding: 0;
 }
-@import url(Schriftarten/Amiri_Quran/AmiriQuran-Regular.ttf);
-@import url(Schriftarten/Caveat/static/Caveat-Bold.ttf);
 
+@font-face {
+    font-family: 'GreatVibes-Regular';
+    src: url('Schriftarten/Great_Vibes/GreatVibes-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Caveat-Bold';
+    src: url('Schriftarten/Caveat/static/Caveat-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'AmiriQuran-Regular';
+    src: url('Schriftarten/Amiri_Quran/AmiriQuran-Regular.ttf') format('truetype');
+}
 html{
     height: 100%;
 }
@@ -501,8 +511,9 @@ form{
 } 
 
 .kBeschreibung{
-    padding-left: 20px;
     margin: 10px;
+    font-family: GreatVibes-Regular, sans-serif;
+    text-align:center;
 }
 
 /*Angebot*/
