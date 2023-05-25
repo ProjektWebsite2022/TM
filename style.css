@@ -440,8 +440,7 @@ form{
 
 .Maps.div {
     box-shadow: 10px 20px 15px #d4cfcf;
-    width: auto;
-    height: auto;
+
     padding: 10px;
     margin: 1cm;
 }
@@ -481,8 +480,12 @@ form{
     margin-bottom: 5%;
     text-align: justify;
     font-size: 1.3vw;
-
 }
+
+.Karte{
+    height: 450px;
+}
+
 /*Galerie*/
 
 .Galleriebild2{
@@ -680,6 +683,10 @@ a.AngebotabgegebenZurück{
 
 
 @media(max-width: 1100px){
+
+    h1{
+        font-size: 40px;
+    }
     
     .toggle{
         display: flex;
@@ -789,12 +796,21 @@ a.AngebotabgegebenZurück{
         width: auto;
         padding-bottom: 40px;
     }
+
+    .Maps.div {
+        margin: 0;
+        width: auto;
+        padding-bottom: 40px;
+    }
     .Teilnehmertext{
         margin: 0;
         text-align: justify;
         font-size: 20px;
         padding-left: 30px;
         padding-right: 30px;
+    }
+    .Karte{
+        height: 500px;
     }
     .Suh{
         margin: 10px 0px 10px 0px;
