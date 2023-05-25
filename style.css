@@ -445,6 +445,12 @@ form{
     padding: 10px;
     margin: 1cm;
 }
+
+.map{
+    width: 100%;
+    height: auto;
+}
+
 .über.uns.text {
     width: 100%;
     height: auto;
