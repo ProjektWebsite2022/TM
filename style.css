@@ -13,7 +13,7 @@
 }
 @font-face {
     font-family: 'AmiriQuran-Regular';
-    src: url('Schriftarten/Amiri_Quran/AmiriQuran-Regular.ttf') format('truetype');
+    src: url('Schriftarten/EB_Garamond/EBGaramond-VariableFont_wght.ttf') format('truetype');
 }
 html{
     height: 100%;
@@ -33,13 +33,13 @@ header{
     background-position: center;
 }
 .logo{
-    width: 120px;
-    height: 70px;
-    margin-left: 20px;
-    margin-top: 10px;
+    width: 100px;
+    height: 50px;
+    margin-left: 15px;
+    margin-top: 25px;
 }
 nav{
-    height: 90px;
+    height: auto;
     width: 100%;
     background-color: #fffff9;
     box-shadow: 0px 2px 4px rgba(0,0,0,0.144);
@@ -56,7 +56,7 @@ nav li{
 }
 nav li a{
     font-family: AmiriQuran-Regular, sans-serif;
-    font-size: 24px;
+    font-size: 30px;
     color:#333;
     text-decoration: none;
     padding: 28px;
@@ -132,6 +132,7 @@ h1{
     margin-top: 40px;
     margin-bottom: 30px;
     margin-right: 0px;
+    font-size: 70px;
     padding: auto;
 }
 details {
@@ -197,7 +198,7 @@ summary:before {
     position: relative;
     left: 10px;
     font-weight: bold;
-    font-size: 50px;
+    font-size: 40px;
     width: 50%;
     margin: 200px 0px 0px 20px;
 }
@@ -264,6 +265,8 @@ summary:before {
 .AngebotSticker{
     padding: 10px 0px 10px 0px;
     text-align: center;
+    font-family: GreatVibes-Regular, sans-serif;
+    font-size: 42px;
 }
 
 .beispiel_bild{
@@ -464,6 +467,7 @@ form{
     margin-left: 0%;
     margin-top: 5%;
     font-family: Caveat-Bold, sans-serif;
+    font-size: 50px;
 }
 
 .Teilnehmertext{
@@ -512,8 +516,14 @@ form{
 
 .kBeschreibung{
     margin: 10px;
+    margin-top: 40px;
+    font-size: 70px;
     font-family: GreatVibes-Regular, sans-serif;
     text-align:center;
+}
+
+.kUe{
+    font-size: 70px;
 }
 
 /*Angebot*/
