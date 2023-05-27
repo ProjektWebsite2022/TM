@@ -1,7 +1,7 @@
 document.addEventListener("visibilitychange", function() {
     if (document.hidden){
-        document.title = "Please come back!";
+        document.title = ":(";
     } else {
-        document.title = "Welcome back!";
+        document.title = ":D";
     }
 });
