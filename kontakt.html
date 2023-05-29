@@ -17,23 +17,90 @@
       background-image: none;
     }
     body { background:#1e1e28; }
+    .md-textbox {
+  position: relative;
+  width: 220px;
+  font-family: "Euclid Circular A";
+  margin-bottom: 20px;  
+}
+.md-textbox label {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  padding: 4px 8px;
+  transform: translateY(50%);
+  pointer-events: none;
+  color: #888888;
+  transition: 0.3s;
+}
+.md-textbox input {
+  height: 56px;
+  width: 100%;
+  padding-left: 16px;
+  border: 2px solid #888888;
+  border-radius: 8px;
+  outline: none;
+  background: transparent;
+  color: #f9f9f9;
+  font-family: inherit;
+  font-size: 16px;
+}
+.md-textbox input:focus ~ label,
+.md-textbox input:not(:placeholder-shown) ~ label {
+  transform: translateY(-90%);
+}
+.md-textbox input:focus,
+.md-textbox .has-value {
+  border-color: #8f44fd;
+}
+.md-textbox .invalid-input {
+  border-color: red;
+}
+.md-textbox .valid-input {
+  border-color: green;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; 
+}
     </style>
   </head>
   <body>
     <div id="app">
       <my-header></my-header>
       <script src="changeTitle.js"></script>
+      <div class="container">
+      <div class="md-textbox">
+        <input id="first-name" type="text" placeholder=" " />
+        <label for="first-name">First Name</label>
+      </div>
+      
+      <div class="md-textbox">
+        <input id="last-name" type="text" placeholder=" " />
+        <label for="last-name">Last Name</label>
+      </div>
+      
+      <div class="md-textbox">
+        <input id="email" type="text" placeholder=" " />
+        <label for="email">Email</label>
+      </div>
+      
+      <div class="md-textbox">
+        <input id="address" type="text" placeholder=" " />
+        <label for="address">Address</label>
+      </div>
+      
+      <div class="md-textbox">
+        <input id="country" type="text" placeholder=" " />
+        <label for="country">Country</label>
+      </div>
+    </div>
+      <br>
     
-      <form>   
-        <input name="Event" type="text" class="feedback-input" placeholder="Event" />   
-        <input name="Vorname" type="text" class="feedback-input" placeholder="Name" />   
-        <input name="Nachname" type="text" class="feedback-input" placeholder="Nachname" />
-        <input name="email" type="text" class="feedback-input" placeholder="Email" />
-        <input name="Telefonnummer" type="text" class="feedback-input" placeholder="Handynummer" />
-        <input name="Preis" type="text" class="feedback-input" placeholder="650€" />
-        <textarea name="text" class="feedback-input" placeholder="Comment"></textarea>
-        <a href="Bestellseite.html"><p type="submit" >Senden</p></a>
-      </form>
+
       
       <my-footer></my-footer>
   </div>
