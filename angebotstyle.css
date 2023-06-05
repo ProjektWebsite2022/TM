@@ -1,0 +1,89 @@
+.cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.card {
+  background-color: rgb(235, 201, 114);
+  margin-left: auto;
+  margin-right: auto;
+  transition: filter 400ms;
+}
+
+.cards .card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  height: 400px;
+  width: 400px;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  transition: 400ms;
+}
+
+.cards .card p.tip {
+  font-size: 1em;
+  font-weight: 700;
+}
+
+.cards .card p.second-text {
+  font-size: .7em;
+}
+
+.cards .card:hover {
+  transform: scale(1.1, 1.1);
+  filter: none;
+}
+
+
+.cards:hover .card:not(:hover) {
+  transform: scale(0.9, 0.9);
+  filter: blur(5px);
+}
+
+
+.angebot_bild{
+  width: 90%;
+  display: inline;
+  border-radius: 10px;
+}
+
+.front {
+  opacity: 1;
+  transition: opacity 0ms;
+}
+
+.card:hover .front {
+  opacity: 0;
+  height: 0px;
+}
+
+.card:hover .back {
+  opacity: 1;
+  height: auto;
+}
+
+.back {
+  opacity: 0;
+  transition: opacity 0ms;
+}
+
+.card:not(:hover) .back {
+  opacity: 0;
+  height: 0px;
+}
+
+.kartentext {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.kartenhref {
+  text-decoration: none;
+  color: #000;
+}

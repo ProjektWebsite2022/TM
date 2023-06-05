@@ -2,6 +2,7 @@
 <html lang="de">
   <head>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="angebotstyle.css" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,12 +17,61 @@
     <div id="app">
       <my-header></my-header>
       <script src="changeTitle.js"></script>
-      
-      <div class="Inhalt">
-        <li><a href="angebot_Hochzeit.html">Hochzeit</a></li>
-        <li><a href="angebot_Weihnachtsfeier.html">Weihnachtsfeier</a></li>
-        <li><a href="angebot_Großevent.html">Großevent</a></li>
-      </div>
+      <div class="Body">
+      <br> <br><br><br>
+      <h1>Was wir zu bieten haben:</h1>
+      <div class="cards">
+
+        <div class="card">
+          <div class="front">
+            <a href="angebot_Weihnachtsfeier.html">
+              <img class="angebot_bild" src="Bilder/PixaBay/Weihnachten.jpg" alt="Hochzeit"/>
+            </a>
+            <br> <br>
+            <p class="AngebotSticker">Deine Weihnachtsfeier</p>
+          </div>
+          <div class="back">
+            <p class="AngebotSticker">Deine Weihnachtsfeier</p>
+            <p class="kartentext">Wir bieten dir alles was du brauchst um ganz entspannt die Feiertage zu verbringen. </p>
+            <br> <br>
+            <a class="kartenhref" href="angebot_Weihnachtsfeier.html">mehr</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="front">
+            <a href="angebot_Hochzeit.html">
+              <img class="angebot_bild" src="Bilder/PixaBay/Hochzeit1.jpg" alt="Hochzeit"/>
+            </a>
+            <br> <br>
+            <p class="AngebotSticker">Deine Traumhochzeit</p>
+          </div>
+          <div class="back">
+            <p class="AngebotSticker">Deine Traumhochzeit</p>
+            <p class="kartentext">Wir bieten dir alles was du brauchst um ganz entspannt den schönnsten Tag deines Lebens zu verbringen. </p>
+            <br> <br>
+            <a class="kartenhref" href="angebot_Hochzeit.html">mehr</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="front">
+            <a href="aangebot_Großevent.html">
+              <img class="angebot_bild" src="Bilder/PixaBay/Party1.jpg" alt="Hochzeit"/>
+            </a>
+            <br> <br>
+            <p class="AngebotSticker">Dein nächstes Großevent </p>
+          </div>
+          <div class="back">
+            <p class="AngebotSticker">Deine nächstes Großevent</p>
+            <p class="kartentext">Wir bieten dir alles was du brauchst um ganz entspannt deine Freunde zu beeindrucken. </p>
+            <br> <br>
+            <a class="kartenhref" href="angebot_Großevent.html">mehr</a>
+          </div>
+        </div>
+    </div>
+    <br><br><br>
+    </div>
       <button class="example_g" type="button"><a href="kontakt.html"> <img class="CallToAction" src="/Bilder/PixaBay/shopping-cart.jpg" alt="mehr" /></a></button>
       <my-footer></my-footer>
   </div>
