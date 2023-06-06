@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="de">
   <head>
-    
     <link rel="stylesheet" href="style.css" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -10,133 +9,135 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="shortcut icon" type="image/png" href="Bilder/favicon-32x32.png"/>
-    
     <style>
-    nav li a.Kontakt{
-      color: goldenrod;
-    }
-    header{
-      height: 100px;
-      background-image: none;
-    }
-    body { background:#1e1e28; }
-    .md-textbox {
-  position: relative;
-  width: 220px;
-  font-family: "Euclid Circular A";
-  margin-bottom: 20px;  
-}
-.md-textbox label {
-  position: absolute;
-  top: 0;
-  left: 10px;
-  padding: 4px 8px;
-  transform: translateY(50%);
-  pointer-events: none;
-  color: #888888;
-  transition: 0.3s;
-}
-.md-textbox input {
-  height: 56px;
-  width: 100%;
-  padding-left: 16px;
-  border: 2px solid #888888;
-  border-radius: 8px;
-  outline: none;
-  background: transparent;
-  color: #f9f9f9;
-  font-family: inherit;
-  font-size: 16px;
-}
-.md-textbox input:focus ~ label,
-.md-textbox input:not(:placeholder-shown) ~ label {
-  transform: translateY(-90%);
-}
-.md-textbox input:focus,
-.md-textbox .has-value {
-  border-color: #8f44fd;
-}
-.md-textbox .invalid-input {
-  border-color: red;
-}
-.md-textbox .valid-input {
-  border-color: green;
-}
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh; 
-}
-.tabs {
-  display: flex;
-  position: relative;
-  background-color: #fff;
-  box-shadow: 0 0 1px 0 rgba(24, 94, 224, 0.15), 0 6px 12px 0 rgba(24, 94, 224, 0.15);
-  padding: 0.75rem;
-  border-radius: 99px;
-}
-
-.tabs * {
-  z-index: 2;
-}
-
-.container input[type="radio"] {
-  display: none;
-}
-
-.tab {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 30px;
-  width: auto;
-  font-size: .8rem;
-  color: black;
-  font-weight: 500;
-  border-radius: 99px;
-  cursor: pointer;
-  transition: color 0.15s ease-in;
-  padding: 0 10px;
-}
-
-.notification {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: .8rem;
-  height: .8rem;
-  position: absolute;
-  top: 10px;
-  left: 30%;
-  font-size: 10px;
-  margin-left: 0.75rem;
-  border-radius: 50%;
-  margin: 0px;
-  background-color: #e6eef9;
-  transition: 0.15s ease-in;
-}
-
-.container input[type="radio"]:checked + label {
-  color:goldenrod;
-}
-
-.container input[type="radio"]:checked + label > .notification {
-  background-color: #185ee0;
-  color: #fff;
-  margin: 0px;
-}
-
-
-
-@media (max-width: 700px) {
- 
-  .tabs {
-    transform: scale(0.6);
-  }
-}
-
+      
+            nav li a.Kontakt{
+              color: goldenrod;
+            }
+            header{
+              height: 100px;
+              background-image: none;
+            }
+            body { background:#1e1e28; }
+            .md-textbox {
+            position: relative;
+            width: 220px;
+            font-family: "Euclid Circular A";
+            margin-bottom: 20px;  
+            }
+            .md-textbox label {
+            position: absolute;
+            top: 0;
+            left: 10px;
+            padding: 4px 8px;
+            transform: translateY(50%);
+            pointer-events: none;
+            color: #888888;
+            transition: 0.3s;
+            }
+            .md-textbox input {
+            height: 56px;
+            width: 100%;
+            padding-left: 16px;
+            border: 2px solid #888888;
+            border-radius: 8px;
+            outline: none;
+            background: transparent;
+            color: #f9f9f9;
+            font-family: inherit;
+            font-size: 16px;
+            }
+            .md-textbox input:focus ~ label,
+            .md-textbox input:not(:placeholder-shown) ~ label {
+            transform: translateY(-90%);
+            }
+            .md-textbox input:focus,
+            .md-textbox .has-value {
+            border-color: #8f44fd;
+            }
+            .md-textbox .invalid-input {
+            border-color: red;
+            }
+            .md-textbox .valid-input {
+            border-color: green;
+            }
+            .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh; 
+            }
+            .tabs {
+            display: flex;
+            position: relative;
+            background-color: #fff;
+            box-shadow: 0 0 1px 0 rgba(24, 94, 224, 0.15), 0 6px 12px 0 rgba(24, 94, 224, 0.15);
+            padding: 0.75rem;
+            border-radius: 99px;
+            }
+            
+            .tabs * {
+            z-index: 2;
+            }
+            
+            .container input[type="radio"] {
+            display: none;
+            }
+            
+            .tab {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 30px;
+            width: auto;
+            font-size: .8rem;
+            color: black;
+            font-weight: 500;
+            border-radius: 99px;
+            cursor: pointer;
+            transition: color 0.15s ease-in;
+            padding: 0 10px;
+            }
+            
+            .notification {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: .8rem;
+            height: .8rem;
+            position: absolute;
+            top: 10px;
+            left: 30%;
+            font-size: 10px;
+            margin-left: 0.75rem;
+            border-radius: 50%;
+            margin: 0px;
+            background-color: #e6eef9;
+            transition: 0.15s ease-in;
+            }
+            
+            .container input[type="radio"]:checked + label {
+            color:goldenrod;
+            }
+            
+            .container input[type="radio"]:checked + label > .notification {
+            background-color: #185ee0;
+            color: #fff;
+            margin: 0px;
+            }
+            
+            
+            
+            @media (max-width: 700px) {
+            
+            .tabs {
+            transform: scale(0.6);
+            }
+            }
+      
+          
+   
     </style>
   </head>
   <body>
@@ -144,56 +145,91 @@
       <my-header></my-header>
       <script src="changeTitle.js"></script>
       <div class="container">
-
-          <div class="tabs">
-            <input type="radio" id="radio-1" name="tabs" checked="">
-            <label class="tab" for="radio-1">Hochzeit</label>
-            <input type="radio" id="radio-2" name="tabs">
-            <label class="tab" for="radio-2">Party</label>
-            <input type="radio" id="radio-3" name="tabs">
-            <label class="tab" for="radio-3">Weinachtsfeier</label>
-            <span class="glider"></span>
-          </div>
-          <br>
-      
-      <div class="md-textbox">
-        <input id="first-name" type="text" placeholder=" " />
-        <label for="first-name">First Name</label>
+        <div class="tabs">
+          <input type="radio" id="radio-1" name="tabs" checked="">
+          <label class="tab" for="radio-1">Hochzeit</label>
+          <input type="radio" id="radio-2" name="tabs">
+          <label class="tab" for="radio-2">Party</label>
+          <input type="radio" id="radio-3" name="tabs">
+          <label class="tab" for="radio-3">Weinachtsfeier</label>
+          <span class="glider"></span>
+        </div>
+        <br>
+        <div class="md-textbox">
+          <input id="first-name" type="text" placeholder=" " spellcheck="true" required />
+          <label for="first-name">First Name</label>
+        </div>
+        <div class="md-textbox">
+          <input id="last-name" type="text" placeholder=" " spellcheck="true" required />
+          <label for="last-name">Last Name</label>
+        </div>
+        <div class="md-textbox">
+          <input id="email" type="email" placeholder=" " spellcheck="true" required />
+          <label for="email">Email</label>
+        </div>
+        <div class="md-textbox">
+          <input id="address" type="text" placeholder=" " spellcheck="true" required />
+          <label for="address">Address</label>
+        </div>
+        <div class="md-textbox">
+          <input id="country" type="text" placeholder=" " spellcheck="true" required />
+          <label for="country">Country</label>
+        </div>
+        <button id="tomButton" style="width: 220px; padding: 10px; margin-top: 20px; color: #f9f9f9; background-color: #888888; border-radius: 8px; border: none; cursor: pointer; font-size: 16px; font-family: 'Euclid Circular A';">Tom</button>
       </div>
-      
-      <div class="md-textbox">
-        <input id="last-name" type="text" placeholder=" " />
-        <label for="last-name">Last Name</label>
-      </div>
-      
-      <div class="md-textbox">
-        <input id="email" type="text" placeholder=" " />
-        <label for="email">Email</label>
-      </div>
-      
-      <div class="md-textbox">
-        <input id="address" type="text" placeholder=" " />
-        <label for="address">Address</label>
-      </div>
-      
-      <div class="md-textbox">
-        <input id="country" type="text" placeholder=" " />
-        <label for="country">Country</label>
-      </div>
-      <button id="tomButton" style="width: 220px; padding: 10px; margin-top: 20px; color: #f9f9f9; background-color: #888888; border-radius: 8px; border: none; cursor: pointer; font-size: 16px; font-family: 'Euclid Circular A';">Tom</button>
-    </div>
       <br>
-
       <my-footer></my-footer>
-  </div>
-
-  </div>
-  <script src="app.js"></script>
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
-
-
+    </div>
+    <script src="app.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script>
+    document.querySelectorAll('.md-textbox input').forEach(input => {
+      input.addEventListener('input', function() {
+        switch(this.id) {
+          case 'first-name':
+          case 'last-name':
+          case 'country':
+            if (!/^[A-Za-z\s]+$/.test(this.value)) {
+              this.classList.remove('valid-input');
+              this.classList.add('invalid-input');
+            } else {
+              this.classList.remove('invalid-input');
+              this.classList.add('valid-input');
+            }
+            break;
+          case 'email':
+            if (!this.validity.valid) {
+              this.classList.remove('valid-input');
+              this.classList.add('invalid-input');
+            } else {
+              this.classList.remove('invalid-input');
+              this.classList.add('valid-input');
+            }
+            break;
+            case 'address':
+            case 'address':
+        if (this.value.length === 0) {
+          this.classList.remove('valid-input');
+          this.classList.add('invalid-input');
+        } else {
+          this.classList.remove('invalid-input');
+          this.classList.add('valid-input');
+        }
+        break;
+          default:
+            this.classList.remove('invalid-input');
+            this.classList.remove('valid-input');
+        }
+      });
+    });
+    </script>
   </body>
 </html>
+
+
+
+
+
