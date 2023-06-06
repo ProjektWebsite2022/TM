@@ -8,6 +8,7 @@
     <title>Timo macht's Kontakt</title>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="shortcut icon" type="image/png" href="Bilder/favicon-32x32.png"/>
     <style>
     nav li a.Kontakt{
       color: goldenrod;
@@ -125,10 +126,6 @@
   margin: 0px;
 }
 
-.video{
-  display: none;
-}
-
 
 
 @media (max-width: 700px) {
@@ -145,56 +142,91 @@
       <my-header></my-header>
       <script src="changeTitle.js"></script>
       <div class="container">
-
-          <div class="tabs">
-            <input type="radio" id="radio-1" name="tabs" checked="">
-            <label class="tab" for="radio-1">Hochzeit</label>
-            <input type="radio" id="radio-2" name="tabs">
-            <label class="tab" for="radio-2">Party</label>
-            <input type="radio" id="radio-3" name="tabs">
-            <label class="tab" for="radio-3">Weinachtsfeier</label>
-            <span class="glider"></span>
-          </div>
-          <br>
-      
-      <div class="md-textbox">
-        <input id="first-name" type="text" placeholder=" " />
-        <label for="first-name">First Name</label>
+        <div class="tabs">
+          <input type="radio" id="radio-1" name="tabs" checked="">
+          <label class="tab" for="radio-1">Hochzeit</label>
+          <input type="radio" id="radio-2" name="tabs">
+          <label class="tab" for="radio-2">Party</label>
+          <input type="radio" id="radio-3" name="tabs">
+          <label class="tab" for="radio-3">Weinachtsfeier</label>
+          <span class="glider"></span>
+        </div>
+        <br>
+        <div class="md-textbox">
+          <input id="first-name" type="text" placeholder=" " spellcheck="true" required />
+          <label for="first-name">First Name</label>
+        </div>
+        <div class="md-textbox">
+          <input id="last-name" type="text" placeholder=" " spellcheck="true" required />
+          <label for="last-name">Last Name</label>
+        </div>
+        <div class="md-textbox">
+          <input id="email" type="email" placeholder=" " spellcheck="true" required />
+          <label for="email">Email</label>
+        </div>
+        <div class="md-textbox">
+          <input id="address" type="text" placeholder=" " spellcheck="true" required />
+          <label for="address">Address</label>
+        </div>
+        <div class="md-textbox">
+          <input id="country" type="text" placeholder=" " spellcheck="true" required />
+          <label for="country">Country</label>
+        </div>
+        <button id="tomButton" style="width: 220px; padding: 10px; margin-top: 20px; color: #f9f9f9; background-color: #888888; border-radius: 8px; border: none; cursor: pointer; font-size: 16px; font-family: 'Euclid Circular A';">Tom</button>
       </div>
-      
-      <div class="md-textbox">
-        <input id="last-name" type="text" placeholder=" " />
-        <label for="last-name">Last Name</label>
-      </div>
-      
-      <div class="md-textbox">
-        <input id="email" type="text" placeholder=" " />
-        <label for="email">Email</label>
-      </div>
-      
-      <div class="md-textbox">
-        <input id="address" type="text" placeholder=" " />
-        <label for="address">Address</label>
-      </div>
-      
-      <div class="md-textbox">
-        <input id="country" type="text" placeholder=" " />
-        <label for="country">Country</label>
-      </div>
-      <button id="tomButton" style="width: 220px; padding: 10px; margin-top: 20px; color: #f9f9f9; background-color: #888888; border-radius: 8px; border: none; cursor: pointer; font-size: 16px; font-family: 'Euclid Circular A';">Tom</button>
-    </div>
       <br>
-
       <my-footer></my-footer>
-  </div>
-
-  </div>
-  <script src="app.js"></script>
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
-
-
+    </div>
+    <script src="app.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script>
+    document.querySelectorAll('.md-textbox input').forEach(input => {
+      input.addEventListener('input', function() {
+        switch(this.id) {
+          case 'first-name':
+          case 'last-name':
+          case 'country':
+            if (!/^[A-Za-z\s]+$/.test(this.value)) {
+              this.classList.remove('valid-input');
+              this.classList.add('invalid-input');
+            } else {
+              this.classList.remove('invalid-input');
+              this.classList.add('valid-input');
+            }
+            break;
+          case 'email':
+            if (!this.validity.valid) {
+              this.classList.remove('valid-input');
+              this.classList.add('invalid-input');
+            } else {
+              this.classList.remove('invalid-input');
+              this.classList.add('valid-input');
+            }
+            break;
+            case 'address':
+            case 'address':
+        if (this.value.length === 0) {
+          this.classList.remove('valid-input');
+          this.classList.add('invalid-input');
+        } else {
+          this.classList.remove('invalid-input');
+          this.classList.add('valid-input');
+        }
+        break;
+          default:
+            this.classList.remove('invalid-input');
+            this.classList.remove('valid-input');
+        }
+      });
+    });
+    </script>
   </body>
 </html>
+
+
+
+
+
