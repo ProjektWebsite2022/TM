@@ -49,6 +49,7 @@ app.component('my-header', {
         <li><a class="Kontakt" href="kontakt.html"> Kontakt</a></li>
       </ul>
     </nav>
+    <br> <br> <br> <br>
     <video class="video" src="fireworks-694.mp4" autoplay loop>
       Dein Browser unterstützt das Video-Tag nicht.
     </video>

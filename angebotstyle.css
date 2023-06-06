@@ -88,6 +88,11 @@
   color: #000;
 }
 
+.CallToAction{
+  height: 75px;
+  width: 75px;
+}
+
 /*More Button*/
 
 button {
