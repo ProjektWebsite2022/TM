@@ -137,6 +137,25 @@
   }
 }
 
+
+
+
+
+.newcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+button {
+    height: 50px;
+    width: 100px;
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Add this line for smoother movement */
+}
+
+
     </style>
   </head>
   <body>
@@ -174,8 +193,58 @@
           <input id="country" type="text" placeholder=" " spellcheck="true" required />
           <label for="country">Country</label>
         </div>
-        <button id="tomButton" style="width: 220px; padding: 10px; margin-top: 20px; color: #f9f9f9; background-color: #888888; border-radius: 8px; border: none; cursor: pointer; font-size: 16px; font-family: 'Euclid Circular A';">Tom</button>
+
+
+
+
+        <div class="newcontainer">
+          <button id="movingButton">Click me</button>
       </div>
+      <script> 
+    
+        const button = document.getElementById("movingButton");
+        const container = document.querySelector(".container");
+        const radius = 100; 
+        let condition = false;
+        
+    
+        function debounce(func, wait) {
+            let timeout;
+            return function(...args) {
+                const context = this;
+                clearTimeout(timeout);
+                timeout = setTimeout(() => func.apply(context, args), wait);
+            };
+        }
+        
+   
+        function handleMouseMove(event) {
+            const buttonRect = button.getBoundingClientRect();
+            const buttonCenterX = buttonRect.x + buttonRect.width / 2;
+            const distanceToMouse = Math.abs(event.clientX - buttonCenterX);
+        
+            if (distanceToMouse < radius && !condition) {
+                const newX = event.clientX < buttonCenterX 
+                    ? buttonRect.x - radius
+                    : buttonRect.x + radius;
+        
+                button.style.transform = `translateX(${newX - buttonRect.x}px)`;
+            }
+        }
+        
+
+        function handleMouseOut() {
+            button.style.transform = 'translateX(0)'; 
+        }
+        
+
+        container.addEventListener("mousemove", debounce(handleMouseMove, 50)); 
+
+        container.addEventListener("mouseout", handleMouseOut);
+        </script>
+
+
+        </div>
       <br>
       <my-footer></my-footer>
     </div>
@@ -227,7 +296,6 @@
     </script>
   </body>
 </html>
-
 
 
 
