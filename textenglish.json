@@ -1,7 +1,7 @@
 {
 	"ÜberUnsSeite" :"",
-	"Title":"Über uns",
-	"ÜberUnsSeiteSuH":"Servus und Herzlich Wilkommen",
+
+	"ÜberUnsSeiteSuH":"BlaBlaBla",
 	"ÜberUnsSeiteEinleitung":"Als fünf engagierte junge Unternehmer haben wir uns zusammengeschlossen, um unsere Leidenschaft für Eventplanung zu vereinen. Mit unserer gebündelten Expertise und Kreativität entwickeln wir einzigartige Konzepte und organisieren unvergessliche Partys, die unsere Kunden begeistern. ",
 	"nameCH": "Christoph Hoffmann - 19",
 	"textCH": "Christoph Hoffmann ist ein 35-jähriger Ingenieur mit einem Master-Abschluss in Elektrotechnik.",
@@ -16,62 +16,17 @@
 	"nameLR": "Lars Rudolph - 19",
 	"textLR": "Lars Rudolph ist ein 29-jähriger Elektrotechniker mit einem Bachelor-Abschluss in Elektrotechnik.",
 	"nameFW": "Felix Westhagen - 21",
-	"textFW": "Felix Westhagen ist ein 35-jähriger Mechatroniker, mit einem Master in in Maschienenbau.",
+	"textFW": "Felix Westhagen ist eine fiktive Person, daher kann ich keinen spezifischen Text über ihn verfassen.",
 	"headerMaps": "Wo wir zu finden sind",
 
 
-	"IndexSeite":"",
-
-	"I1":"TimoMachts macht Ihre nächste Feier noch besser!",
-	"I2":"Was wir machen:",
-	"I3":"Deine Traumhochzeit",
-	"I4":"Deine Weihnachtsfeier",
-	"I5":"Dein nächstes Großevent",
-	"I6":"Deine Traumhochzeit",
-	"I7":"Deine Weihnachtsfeier",
-	"I8":"Dein nächstes Großevent",
-	"I9":"Inspiriert von unserer gemeinsamen Leidenschaft für Eventplanung und kreatives Denken haben sich fünf junge Unternehmer zusammengefunden. Unsere Idee, unvergessliche Partys zu gestalten, entstand aus dem Wunsch, Menschen mit einzigartigen Erlebnissen zu begeistern. Durch die Kombination unserer individuellen Fähigkeiten und Talente entwickeln wir innovative Konzepte und sorgen dafür, dass jede Feier ein außergewöhnliches Ereignis wird. Unsere Teamarbeit und unser Enthusiasmus ermöglichen es uns, maßgeschneiderte Events zu gestalten, die die Erwartungen unserer Kunden übertreffen.",
 
 
-	"GSeite":"",
-	
-	"G1":"Einblick in unsere Veranstaltungen",
-	"G2":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nostrumanimi molestiae ratione labore iste quia voluptatem quibusdam!Voluptatum porro ex veniam labore aspernatur ab hic qui ipsum autemmaiores.",
-	"G3":"Hochzeitseinblick",
-	"G4":"Lass uns deine Traumhochzeit gemeinsam zum Leben erwecken!",
-	"G5":"Weihnachtsfeier",
-	"G6":"Ohne Stress ein schönes Fest",
-	"G7":"Party",
-	"G8":"Lass uns gemeinsam eine unvergessliche Party feiern!",
 
-	"ASeite":"",
-
-	"A1":"Was wir zu bieten haben:",
-	"A2":"Deine Weihnachtsfeier",
-	"A3":"Deine Weihnachtsfeier",
-	"A4":"Wir bieten dir alles was du brauchst um ganz entspannt die Feiertage zu verbringen.",
-	"A5":"Learn More",
-	"A6":"Deine Traumhochzeit",
-	"A7":"Deine Traumhochzeit",
-	"A8":"Wir bieten dir alles was du brauchst um ganz entspannt den schönnsten Tag deines Lebens zu verbringen.",
-	"A9":"Learn More",
-	"A10":"Dein nächstes Großevent",
-	"A11":"Deine nächstes Großevent",
-	"A12":"Wir bieten dir alles was du brauchst um ganz entspannt deine Freunde zu beeindrucken. ",
-	"A13":"Learn More",
-
-	
 
 	"Q&ASeite":"",
 
-	"QAtitle":"Timo Machts Q&A",
-	"QA1":"Fragen und Antworten:",
-	"QA2":"Wie können wir weiter helfen?",
-	"QA3":"Bezahlmethoden",
-	"QA4":"Fragen zur Buchung",
-	"QA5":"Benutzerdaten",
-	"QA6":"Unsere AGB:",
-	
+
 	"QaAH": "Wir sind hier, um Ihnen bei Ihren Fragen und Anliegen behilflich zu sein. Unsere Q&A-Seite steht Ihnen zur Verfügung, um Ihnen umfassende Informationen zu bieten und Ihre Fragen bestmöglich zu beantworten. Unser engagiertes Team steht Ihnen zur Verfügung, um Ihre Anliegen zu klären und Ihnen bei Problemen zu helfen.\n\nEgal, ob es um technische Unterstützung, Produktinformationen, Anleitungen oder allgemeine Fragen geht, wir sind bestrebt, Ihnen die bestmögliche Lösung anzubieten. Durchsuchen Sie unsere umfangreiche Sammlung von Fragen und Antworten oder nutzen Sie die Suchfunktion, um gezielt nach spezifischen Themen zu suchen.\n\nWenn Sie keine Antwort auf Ihre Frage finden oder zusätzliche Unterstützung benötigen, zögern Sie nicht, uns direkt zu kontaktieren. Unser Kundensupport-Team steht Ihnen zur Verfügung und wird sich bemühen, Ihnen zeitnah zu antworten und Ihnen weiterzuhelfen.\n\nWir freuen uns darauf, Ihnen bei Ihrem Anliegen behilflich zu sein und Ihnen den bestmöglichen Service zu bieten. Lassen Sie uns wissen, wie wir Ihnen weiterhelfen können.",
 	"QaAB": "Wir akzeptieren: Kreditkarten, PayPal, Überweisung und Barzahlung bei Übergabe",
 	"QaAF": "Egal welche Frage dir durch den Kopf geht, ruf uns einfach an.",

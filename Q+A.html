@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Timo macht's Q+A</title>
+    <title>{{jsonData.QAtitle}}</title>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="shortcut icon" type="image/png" href="Bilder/favicon-32x32.png"/>
@@ -15,11 +15,11 @@
       <my-header></my-header>
       <script src="changeTitle.js"></script>
       
-      <h1 class="QUeberschrift">Fragen und Antworten:</h1>
+      <h1 class="QUeberschrift">{{jsonData.QA1}}</h1>
 
       <div class="QaA">
       <details>
-        <summary>Wie können wir weiter helfen?</summary>
+        <summary>{{jsonData.QA2}}</summary>
         <p class="Hilfe_Text" id="Hilfe">
           {{jsonData.QaAF}}
         </p>
@@ -28,7 +28,7 @@
 
       <div class="QaA">
       <details>
-        <summary>Bezahlmethoden</summary>
+        <summary>{{jsonData.QA3}}</summary>
         <p class="Hilfe_Text" id="Bezahlmethoden">
           {{jsonData.QaAB}}
         </p>
@@ -37,7 +37,7 @@
 
       <div class="QaA">
       <details>
-        <summary>Fragen zur Buchung</summary>
+        <summary>{{jsonData.QA4}}</summary>
         <p class="Hilfe_Text" id="Buchung">
           {{jsonData.QaAF}}
         </p>
@@ -46,7 +46,7 @@
 
       <div class="QaA">
       <details>
-        <summary>Benutzerdaten</summary>
+        <summary>{{jsonData.QA5}}</summary>
         <p class="Hilfe_Text" id="Benutzerdaten">
           {{jsonData.QaAD}}
         </p>
@@ -55,7 +55,7 @@
 
       <div class="QaA">
       <details>
-        <summary>Unsere AGB:</summary>
+        <summary>{{jsonData.QA6}}</summary>
         <p class="Hilfe_Text" id="AGB">
           {{jsonData.QaAAGB}}
         </p>

@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Timo macht's Über uns</title>
+    <title>{{jsonData.title}}</title>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="shortcut icon" type="image/png" href="Bilder/favicon-32x32.png"/>
@@ -15,6 +15,7 @@
   </head>
   <body>
     
+
     <div id="app">
       <my-header></my-header>
       <script src="changeTitle.js"></script>
@@ -38,6 +39,7 @@
         </p>
       </div>
     </div>
+    
     <div data-aos="fade-right" data-aos-offset="300" data-aos-delay="400" class="Teilnehmer div">
       <img
         class="Teilnehmerbild"
