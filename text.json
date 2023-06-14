@@ -63,17 +63,36 @@
 	"AWSeite":"",
 	"AW1":"Information",
 	"AW2":"Bitte noch Text erfüllen",
-	"AW3":"Schreib uns!",
+	"AW4":"Alle Jahre wieder kommt das Weihnachtsfest und mit uns kann deins so schön werden!",
+
 
 	"AHSeite":"",
 	"AH1":"Information",
-	"AH2":"Bitte noch Text erfüllen",
+
 	"AH3":"Schreib uns!",
+	"AH4":"So könnte deine Hochzeit aussehen!",
+	
+
 
 	"AGSeite":"",
 	"AG1":"Information",
-	"AG2":"Bitte noch Text erfüllen",
+	
 	"AG3":"Schreib uns!",
+	"AG4":"So kannst du dir dein nächste MegaParty vorstellen!",
+	
+
+	"KontaktSeite":"",
+	"K1":"Vorname",
+	"K2":"Nachname",
+	"K3":"E-Mail",
+	"K4":"Adresse",
+	"K5":"Land",
+	"K6":"Hochzeit",
+	"K7":"Party",
+	"K8":"Weinachtsfeier",
+
+
+
 
 
 

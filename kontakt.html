@@ -31,7 +31,7 @@
   padding: 4px 8px;
   transform: translateY(50%);
   pointer-events: none;
-  color: #888888;
+  color:goldenrod;
   transition: 0.3s;
 }
 .md-textbox input {
@@ -138,9 +138,6 @@
 }
 
 
-
-
-
 .newcontainer {
     display: flex;
     justify-content: center;
@@ -165,33 +162,33 @@ button {
       <div class="container">
         <div class="tabs">
           <input type="radio" id="radio-1" name="tabs" checked="">
-          <label class="tab" for="radio-1">Hochzeit</label>
+          <label class="tab" for="radio-1">{{jsonData.K6}}</label>
           <input type="radio" id="radio-2" name="tabs">
-          <label class="tab" for="radio-2">Party</label>
+          <label class="tab" for="radio-2">{{jsonData.K7}}</label>
           <input type="radio" id="radio-3" name="tabs">
-          <label class="tab" for="radio-3">Weinachtsfeier</label>
+          <label class="tab" for="radio-3">{{jsonData.K8}}</label>
           <span class="glider"></span>
         </div>
         <br>
         <div class="md-textbox">
           <input id="first-name" type="text" placeholder=" " spellcheck="true" required />
-          <label for="first-name">First Name</label>
+          <label for="first-name">{{jsonData.K1}}</label>
         </div>
         <div class="md-textbox">
           <input id="last-name" type="text" placeholder=" " spellcheck="true" required />
-          <label for="last-name">Last Name</label>
+          <label for="last-name">{{jsonData.K2}}</label>
         </div>
         <div class="md-textbox">
           <input id="email" type="email" placeholder=" " spellcheck="true" required />
-          <label for="email">Email</label>
+          <label for="email">{{jsonData.K3}}</label>
         </div>
         <div class="md-textbox">
           <input id="address" type="text" placeholder=" " spellcheck="true" required />
-          <label for="address">Address</label>
+          <label for="address">{{jsonData.K4}}</label>
         </div>
         <div class="md-textbox">
           <input id="country" type="text" placeholder=" " spellcheck="true" required />
-          <label for="country">Country</label>
+          <label for="country">{{jsonData.K5}}</label>
         </div>
 
 
@@ -296,7 +293,3 @@ button {
     </script>
   </body>
 </html>
-
-
-
-
