@@ -80,10 +80,8 @@ app.component('my-header', {
           <h1>{{$root.jsonData.F2}}</h1>
           <ul>
             
-          <li><a href="#" @click.prevent="$emit('switch-language')">{{$root.jsonData.F1}}</a></li>
-            <li><a href="#" @click.prevent="switchLanguage">{{$root.jsonData.F1}}</a></li>
-            <button @click="switchLanguage">Switch Language</button>
-
+          
+            <li><a href="#" @click.prevent="$emit('switch-language')">{{$root.jsonData.F1}}</a></li>
             <li><a href="ueber_uns.html">{{$root.jsonData.F3}}</a></li>
             <li><a href="Q+A.html#AGB">{{$root.jsonData.F4}}</a></li>
           </ul>
