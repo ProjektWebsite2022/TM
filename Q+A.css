@@ -1,0 +1,168 @@
+header{
+    height: 100px;
+}
+.video{
+    display: none;
+  }
+
+.attribution { 
+    font-size: 40px; 
+    margin-top: 25px;
+    text-align: center;  
+}
+
+
+* { box-sizing: border-box; }
+
+html {
+    font-size: 30px;
+}
+
+
+.faq { 
+    border-radius: 25px;
+    padding: 50px 25px;
+    margin: 50px 5% 5% 5%;
+}
+
+
+.faq__heading { 
+    color: goldenrod;
+    font-size: 3.2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-left: 0px;
+}
+
+.faq__detail {
+    border-bottom: 1px solid #e7e7e9;
+    margin: 20px 0 0 0;
+    padding: 5px 0 20px 0;
+}
+
+.faq__summary:hover,
+.faq__summary:active { 
+    color: goldenrod;
+    cursor: pointer; 
+}
+
+.faq__detail[open] > .faq__summary { 
+    font-weight: 700; 
+}
+
+.faq__summary {
+    list-style: none;
+  }
+
+.faq__summary::-webkit-details-marker {
+    display: none;
+  }
+
+.faq__summary { 
+    display: block;
+    padding: 0;
+    position: relative;
+    text-align: right;
+}
+
+    
+.faq__summary:after {
+    display: inline-block;
+    content: url("https://bobmatyas.github.io/fm-faq-accordion/images/icon-arrow-down.svg");
+    background-repeat: no-repeat;
+    background-position: right center;
+    text-align: right;
+    padding-bottom: 20px;
+  }
+  
+details[open] .faq__summary:after {
+    display: inline-block;
+    width: 18px;
+    height: 10px;
+    content: "";
+    background-repeat: no-repeat;
+    background-position: center right;
+    transform:scaleY(-1);
+}
+  
+
+.faq__question {
+    left: 0;
+    position: absolute;
+    text-align: left;
+    top: 0;
+    width: 90%;
+}
+
+.faq__question {
+    display: inline-block;
+    margin: 5px 0;
+    text-align: left;
+    width: 90%;
+}
+
+.faq__summary {
+    color: #000000;
+    font-size: 1.4rem; 
+}
+
+.faq__summary:focus {
+    color: goldenrod; 
+    font-weight: bold;
+    outline: none;
+}
+
+.faq__text {
+    color: #000000;
+    font-size: var(--base-font-size);
+    line-height: 1.6;
+    margin: 10px 0 0 0;
+    margin-left: 20px;
+}
+
+.hidden-lg { display: block; }
+    
+.visible-lg { display: none; }
+
+
+@media (max-width: 1100px) {
+    .faq {
+        align-items: center;
+        display: flex;
+        padding: 0;
+        margin: 0;
+    }
+
+    .faq__question{
+        font-size: 30px;
+    }
+
+    .faq__holder {
+        margin: 0 50px;
+        width: 100%;
+        padding-bottom: 40px;
+    }
+
+    .faq__heading {
+        text-align: left;
+        font-size: larger;
+    }
+
+    .hidden-lg { display: none; }
+
+    .visible-lg { 
+        display: block; 
+        position: absolute;
+        margin-top: 120px;
+        left: -80px;    
+    }
+
+    .faq__text {
+        margin: 0 0 10px 0;
+    }
+
+    .faq__detail {
+        margin: 10px 0 0 0 0;
+        padding: 0;
+    }
+}

@@ -2,6 +2,7 @@
 <html lang="de">
   <head>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="Q+A.css" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,55 +15,53 @@
     <div id="app">
       <my-header></my-header>
       <script src="changeTitle.js"></script>
+      <main class="faq">
+        
+        <div class="faq__holder">
+        <h1 class="faq__heading">{{jsonData.QA1}}</h1>
+        <br>
+       
+        <details class="faq__detail">
+            <summary  class="faq__summary"><span class="faq__question">{{jsonData.QA2}}</span></summary>
+            <br>
+            <p class="faq__text" id="Hilfe">{{jsonData.QaAF}}</p>
+            <br>
+        </details>
       
-      <h1 class="QUeberschrift">{{jsonData.QA1}}</h1>
-
-      <div class="QaA">
-      <details>
-        <summary>{{jsonData.QA2}}</summary>
-        <p class="Hilfe_Text" id="Hilfe">
-          {{jsonData.QaAF}}
-        </p>
-      </details>
+        <details class="faq__detail">
+          <summary  class="faq__summary"><span class="faq__question">{{jsonData.QA3}}</span></summary>
+          <br>
+          <p class="faq__text" id="Bezahlmethoden">{{jsonData.QaAB}}</p>
+          <br>
+        </details>  
+      
+        <details class="faq__detail">
+          <summary  class="faq__summary"><span class="faq__question">{{jsonData.QA4}}</span></summary>
+          <br>
+          <p class="faq__text" id="Buchung">{{jsonData.QaAF}}</p>
+          <br>
+        </details>  
+        
+        <details class="faq__detail">
+          <summary  class="faq__summary"><span class="faq__question">{{jsonData.QA5}}</span></summary>
+          <br>
+          <p class="faq__text" id="Benutzerdaten">{{jsonData.QaAD}}</p>
+          <br>
+        </details> 
+        
+        <details class="faq__detail">
+          <summary  class="faq__summary"><span class="faq__question">{{jsonData.QA6}}</span></summary>
+          <br>
+          <p class="faq__text" id="AGB">{{jsonData.QaAAGB}}</p>
+          <br>
+        </details>   
+      
       </div>
-
-      <div class="QaA">
-      <details>
-        <summary>{{jsonData.QA3}}</summary>
-        <p class="Hilfe_Text" id="Bezahlmethoden">
-          {{jsonData.QaAB}}
-        </p>
-      </details>
-      </div>
-
-      <div class="QaA">
-      <details>
-        <summary>{{jsonData.QA4}}</summary>
-        <p class="Hilfe_Text" id="Buchung">
-          {{jsonData.QaAF}}
-        </p>
-      </details>
-      </div>
-
-      <div class="QaA">
-      <details>
-        <summary>{{jsonData.QA5}}</summary>
-        <p class="Hilfe_Text" id="Benutzerdaten">
-          {{jsonData.QaAD}}
-        </p>
-      </details>
-      </div>
-
-      <div class="QaA">
-      <details>
-        <summary>{{jsonData.QA6}}</summary>
-        <p class="Hilfe_Text" id="AGB">
-          {{jsonData.QaAAGB}}
-        </p>
-      </details>
+      </main> 
+      <my-footer></my-footer>
       </div>
       <button class="example_g" type="button"><a href="kontakt.html"> <img class="CallToAction" src="/Bilder/PixaBay/shopping-cart.jpg" alt="mehr" /></a></button>
-      <my-footer></my-footer>
+      
   </div>
 
   <script src="app.js"></script>
