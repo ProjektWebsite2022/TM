@@ -68,7 +68,6 @@
 
 	"AHSeite":"",
 	"AH1":"Information",
-
 	"AH3":"Schreib uns!",
 	"AH4":"So könnte deine Hochzeit aussehen!",
 	
@@ -76,10 +75,31 @@
 
 	"AGSeite":"",
 	"AG1":"Information",
-	
 	"AG3":"Schreib uns!",
 	"AG4":"So kannst du dir dein nächste MegaParty vorstellen!",
 	
+
+	"Footer":"",
+	"F1":"English Version",
+	"F2":"Über Uns",
+	"F3":"Unser Unternehmen",
+	"F4":"AGB",
+	"F5":"Kundenservice",
+	"F6":"Hilfe",
+	"F7":"Kontakt",
+	"F8":"Buchung",
+	"F9":"Benutzerdaten",
+	"F10":"Fragen zur Buchung",
+	"F11":"Bezahlen",
+	
+
+	"Header":"",
+	"H1":"Startseite",
+	"H2":"Angebot",
+	"H3":"Über uns",
+	"H4":"Gallerie",
+	"H5":"Kontakt",
+
 
 	"KontaktSeite":"",
 	"K1":"Vorname",
@@ -91,11 +111,6 @@
 	"K7":"Party",
 	"K8":"Weinachtsfeier",
 
-
-
-
-
-
 	"Q&ASeite":"",
 
 	"QAtitle":"Timo Machts Q&A",
@@ -105,19 +120,14 @@
 	"QA4":"Fragen zur Buchung",
 	"QA5":"Benutzerdaten",
 	"QA6":"Unsere AGB:",
-	
 	"QaAH": "Wir sind hier, um Ihnen bei Ihren Fragen und Anliegen behilflich zu sein. Unsere Q&A-Seite steht Ihnen zur Verfügung, um Ihnen umfassende Informationen zu bieten und Ihre Fragen bestmöglich zu beantworten. Unser engagiertes Team steht Ihnen zur Verfügung, um Ihre Anliegen zu klären und Ihnen bei Problemen zu helfen.\n\nEgal, ob es um technische Unterstützung, Produktinformationen, Anleitungen oder allgemeine Fragen geht, wir sind bestrebt, Ihnen die bestmögliche Lösung anzubieten. Durchsuchen Sie unsere umfangreiche Sammlung von Fragen und Antworten oder nutzen Sie die Suchfunktion, um gezielt nach spezifischen Themen zu suchen.\n\nWenn Sie keine Antwort auf Ihre Frage finden oder zusätzliche Unterstützung benötigen, zögern Sie nicht, uns direkt zu kontaktieren. Unser Kundensupport-Team steht Ihnen zur Verfügung und wird sich bemühen, Ihnen zeitnah zu antworten und Ihnen weiterzuhelfen.\n\nWir freuen uns darauf, Ihnen bei Ihrem Anliegen behilflich zu sein und Ihnen den bestmöglichen Service zu bieten. Lassen Sie uns wissen, wie wir Ihnen weiterhelfen können.",
 	"QaAB": "Wir akzeptieren: Kreditkarten, PayPal, Überweisung und Barzahlung bei Übergabe",
 	"QaAF": "Egal welche Frage dir durch den Kopf geht, ruf uns einfach an.",
 	"QaAD": "Du benötigst follgeende Informationen: deinen Namen, Vornamen, ... . Siehe auch in unserem Formular.",
 	"QaAAGB": "Mit der Nutzung unserer Dienste erklären Sie sich mit unseren Allgemeinen Geschäftsbedingungen einverstanden. Bitte lesen Sie diese sorgfältig durch, bevor Sie fortfahren.",
 
-
-
-
 	
 	"KontakFromularSeite":"",
-
 
 	"KontaktFomularVorname":"Vorname",
 	"KontaktFomularNachname":"Nachname",

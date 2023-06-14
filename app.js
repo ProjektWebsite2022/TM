@@ -15,7 +15,7 @@ const app = Vue.createApp({
 
           // Change filename based on language
           if (this.currentLanguage === 'english') {
-              fileName = 'textenglish.json';
+              fileName = 'text2.json';
           }
 
           request.open('GET', fileName);
@@ -56,11 +56,11 @@ app.component('my-header', {
       </label>
       
       <ul>
-        <li><a class="Startseite" href="index.html"> Startseite</a></li>
-        <li><a class="Angebot" href="angebot.html"> Angebot</a></li>
-        <li><a class="Ueber_uns" href="ueber_uns.html"> Über uns</a></li>
-        <li><a class="Gallerie" href="gallerie.html"> Gallerie</a></li>
-        <li><a class="Kontakt" href="kontakt.html"> Kontakt</a></li>
+        <li><a class="Startseite" href="index.html"> {{$root.jsonData.H1}}</a></li>
+        <li><a class="Angebot" href="angebot.html"> {{$root.jsonData.H2}}</a></li>
+        <li><a class="Ueber_uns" href="ueber_uns.html"> {{$root.jsonData.H3}}</a></li>
+        <li><a class="Gallerie" href="gallerie.html"> {{$root.jsonData.H4}}</a></li>
+        <li><a class="Kontakt" href="kontakt.html"> {{$root.jsonData.H5}}</a></li>
       </ul>
     </nav>
     <br> <br> <br>
@@ -71,16 +71,21 @@ app.component('my-header', {
       </header>
     `,
   }).component('my-footer', {
+    
     template:`
  <footer>
     <div class="Fußzeile">
       <ul>
         <li>
-          <h1>Über Uns</h1>
+          <h1>{{$root.jsonData.F2}}</h1>
           <ul>
+            
+          <li><a href="#" @click.prevent="$emit('switch-language')">{{$root.jsonData.F1}}</a></li>
+            <li><a href="#" @click.prevent="switchLanguage">{{$root.jsonData.F1}}</a></li>
             <button @click="switchLanguage">Switch Language</button>
-            <li><a href="ueber_uns.html">Unser Unternehmen</a></li>
-            <li><a href="Q+A.html#AGB">AGB</a></li>
+
+            <li><a href="ueber_uns.html">{{$root.jsonData.F3}}</a></li>
+            <li><a href="Q+A.html#AGB">{{$root.jsonData.F4}}</a></li>
           </ul>
         </li>
       </ul>
@@ -88,10 +93,10 @@ app.component('my-header', {
     <div class="Fußzeile">
       <ul>
         <li>
-          <h1>Kundenservice</h1>
+          <h1>{{$root.jsonData.F5}}</h1>
           <ul>
-            <li><a href="Q+A.html#Hilfe">Hilfe</a></li>
-            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="Q+A.html#Hilfe">{{$root.jsonData.F6}}</a></li>
+            <li><a href="kontakt.html">{{$root.jsonData.F7}}</a></li>
             <li><p class="Kontaktdaten">Tel.: +49 170 6378290</p></li>
             <li><p class="Kontaktdaten">E-Mail: TimoMachts@TM.com</p></li>
           </ul>
@@ -101,11 +106,11 @@ app.component('my-header', {
     <div class="Fußzeile">
       <ul>
         <li>
-          <h1>Buchung</h1>
+          <h1>{{$root.jsonData.F8}}</h1>
           <ul>
-            <li><a href="Q+A.html#Benutzerdaten">Benutzerdaten</a></li>
-            <li><a href="Q+A.html#Buchung">Fragen zur Buchung</a></li>
-            <li><a href="Q+A.html#Bezahlmethoden">Bezahlen</a></li>
+            <li><a href="Q+A.html#Benutzerdaten">{{$root.jsonData.F9}}</a></li>
+            <li><a href="Q+A.html#Buchung">{{$root.jsonData.F10}}</a></li>
+            <li><a href="Q+A.html#Bezahlmethoden">{{$root.jsonData.F11}}</a></li>
           </ul>
         </li>
       </ul>
