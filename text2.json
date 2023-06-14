@@ -107,5 +107,26 @@
 "KontaktFomularHausNR":"House No",
 "KontaktFomularPLZ":"Zip Code",
 "KontaktFomularLand":"Country",
-"KontaktFomularE-Mail":"E-Mail"
+"KontaktFomularE-Mail":"E-Mail",
+
+"ÜberUnsSeite": "",
+
+"Title": "About us",
+"ÜberUnsSeiteSuH": "Hello and welcome",
+"ÜberUnsSeiteEinleitung": "As five dedicated young entrepreneurs, we have come together to unite our passion for event planning. With our combined expertise and creativity, we develop unique concepts and organize unforgettable parties that delight our customers.",
+"nameCH": "Christoph Hoffmann - 19",
+"textCH": "Christoph Hoffmann is a 19-year-old engineer with a master's degree in electrical engineering.",
+"nameFF": "Frederik Frank - 18",
+"textFF": "Frederik Frank is a 18-year-old architect with a master's degree in architecture.",
+"nameJG": "Josua Grammel (defeded)",
+"textJG": "Josua Grammel is a 28-year-old software developer with a bachelor's degree in computer science.",
+"nameNW": "Noah Weiß - 19",
+"textNW": "Noah Weiß is a 19-year-old mechanical engineer with a master's degree in mechanical engineering.",
+"nameTR": "Timo Ratter - 21",
+"textTR": "Timo Ratter is a 21-year-old web developer with a bachelor's degree in computer science.",
+"nameLR": "Lars Rudolph - 19",
+"textLR": "Lars Rudolph is a 19-year-old electrical engineer with a bachelor's degree in electrical engineering.",
+"nameFW": "Felix Westhagen - 21",
+"textFW": "Felix Westhagen is a 21-year-old mechatronics engineer with a master's degree in mechanical engineering.",
+"headerMaps": "Where to find us"
 }
