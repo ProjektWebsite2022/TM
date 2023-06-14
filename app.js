@@ -1,29 +1,43 @@
 const app = Vue.createApp({
-    //data, functions
-    //template: '<h2> I am the template </h2>'
-    data() {
-        return{
-            jsonData: {},
-            
-        }
-    },
-    mounted() {
-      this.loadJSON();
-    },
+  data() {
+      return{
+          jsonData: {},
+          currentLanguage: 'default', // This is the initial language
+      }
+  },
+  mounted() {
+    this.loadJSON();
+  },
+  methods: {
+      loadJSON() {
+          const request = new XMLHttpRequest();
+          let fileName = 'text.json'; // Default filename
 
-    methods: {
-        loadJSON() {
-            const request = new XMLHttpRequest();
-            request.open('GET', 'text.json');
-            request.onload = () => {
-              if (request.status === 200) {
-                this.jsonData = JSON.parse(request.responseText);
-              }
-            };
-            request.send();
+          // Change filename based on language
+          if (this.currentLanguage === 'english') {
+              fileName = 'textenglish.json';
           }
-    }
-    
+
+          request.open('GET', fileName);
+          request.onload = () => {
+            if (request.status === 200) {
+              this.jsonData = JSON.parse(request.responseText);
+            }
+          };
+          request.send();
+      },
+      switchLanguage() {
+          // Toggle language between default and english
+          if (this.currentLanguage === 'default') {
+              this.currentLanguage = 'english';
+          } else {
+              this.currentLanguage = 'default';
+          }
+
+          // Load JSON again with new language
+          this.loadJSON();
+      }
+  }
 });
 
 app.component('my-header', {
@@ -64,6 +78,7 @@ app.component('my-header', {
         <li>
           <h1>Über Uns</h1>
           <ul>
+          <button @click="switchLanguage">Switch Language</button>
             <li><a href="ueber_uns.html">Unser Unternehmen</a></li>
             <li><a href="Q+A.html#AGB">AGB</a></li>
           </ul>
