@@ -13,6 +13,11 @@ const app = Vue.createApp({
           const request = new XMLHttpRequest();
           let fileName = 'text.json'; // Default filename
 
+          const savedLanguage = localStorage.getItem('currentLanguage');
+          if (savedLanguage !== null) {
+            this.currentLanguage = savedLanguage;
+          }
+
           // Change filename based on language
           if (this.currentLanguage === 'english') {
               fileName = 'text2.json';
@@ -25,6 +30,11 @@ const app = Vue.createApp({
             }
           };
           request.send();
+
+
+
+
+
       },
       switchLanguage() {
           // Toggle language between default and english
@@ -34,9 +44,24 @@ const app = Vue.createApp({
               this.currentLanguage = 'default';
           }
 
+          localStorage.setItem('currentLanguage', this.currentLanguage);
+
           // Load JSON again with new language
           this.loadJSON();
       }
+
+
+
+
+
+
+
+
+
+
+
+
+
   }
 });
 
