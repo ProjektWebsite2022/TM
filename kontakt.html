@@ -151,10 +151,10 @@
 
 
 .type1::after {
-  content: "Thanks";
+  content: "Abschicken";
   height: 50px;
   width: 150px;
-  background-color: #008080;
+  background-color: goldenrod;
   color: #fff;
   position: absolute;
   top: 0%;
@@ -169,11 +169,11 @@
 }
 
 .type1::before {
-  content: "Hover Me";
+  content: "Dateneingabe";
   height: 50px;
   width: 150px;
-  background-color: #fff;
-  color: #008080;
+  background-color:#fff;
+  color:goldenrod;
   position: absolute;
   top: 0%;
   left: 0%;
@@ -237,7 +237,7 @@
           <label for="country">{{jsonData.K5}}</label>
         </div>
 
-        <button class="button type1">
+        <button href="Bestellseite.html"class="button type1">
         </button>
 
 
@@ -303,6 +303,8 @@
     } else {
       button.classList.remove('valid-input');
     }
+
+    
 
 
 
