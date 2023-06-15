@@ -169,7 +169,7 @@
 }
 
 .type1::before {
-  content: "Dateneingabe";
+  content: "3 2 1";
   height: 50px;
   width: 150px;
   background-color:#fff;
@@ -237,8 +237,9 @@
           <label for="country">{{jsonData.K5}}</label>
         </div>
 
-        <button href="Bestellseite.html"class="button type1">
+        <button id="submit-button" href="Bestellseite.html" class="button type1">
         </button>
+        
 
 
 
@@ -292,6 +293,12 @@
         this.classList.remove('invalid-input');
         this.classList.remove('valid-input');
     }
+
+    document.getElementById("submit-button").addEventListener("click", function() {
+    if(this.classList.contains("valid-input")) {
+        window.location.href = "Bestellseite.html";
+    }
+});
 
     // After validating this input, check all inputs
     var allValid = Array.from(document.querySelectorAll('.md-textbox input')).every(input => input.classList.contains('valid-input'));
