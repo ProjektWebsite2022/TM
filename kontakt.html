@@ -137,6 +137,64 @@
   }
 }
 
+.button {
+  height: 50px;
+  width: 150px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+}
+
+
+
+.type1::after {
+  content: "Thanks";
+  height: 50px;
+  width: 150px;
+  background-color: #008080;
+  color: #fff;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  transform: translateY(50px);
+  font-size: 1.2rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease-in-out;
+}
+
+.type1::before {
+  content: "Hover Me";
+  height: 50px;
+  width: 150px;
+  background-color: #fff;
+  color: #008080;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  transform: translateY(0px) scale(1.2);
+  font-size: 1.2rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease-in-out;
+}
+
+
+
+.type1.valid-input::after {
+  transform: translateY(0) scale(1.2);
+}
+
+.type1.valid-input::before {
+  transform: translateY(-50px) scale(0) rotate(120deg);
+}
 
 
 
@@ -179,54 +237,11 @@
           <label for="country">{{jsonData.K5}}</label>
         </div>
 
+        <button class="button type1">
+        </button>
 
 
 
-        <div class="newcontainer">
-          <button id="movingButton">Click me</button>
-      </div>
-      <script> 
-    
-        const button = document.getElementById("movingButton");
-        const container = document.querySelector(".container");
-        const radius = 100; 
-        let condition = false;
-        
-    
-        function debounce(func, wait) {
-            let timeout;
-            return function(...args) {
-                const context = this;
-                clearTimeout(timeout);
-                timeout = setTimeout(() => func.apply(context, args), wait);
-            };
-        }
-        
-   
-        function handleMouseMove(event) {
-            const buttonRect = button.getBoundingClientRect();
-            const buttonCenterX = buttonRect.x + buttonRect.width / 2;
-            const distanceToMouse = Math.abs(event.clientX - buttonCenterX);
-        
-            if (distanceToMouse < radius && !condition) {
-                const newX = event.clientX < buttonCenterX 
-                    ? buttonRect.x - radius
-                    : buttonRect.x + radius;
-        
-                button.style.transform = `translateX(${newX - buttonRect.x}px)`;
-            }
-        }
-        
-
-        function handleMouseOut() {
-            button.style.transform = 'translateX(0)'; 
-        }
-        
-
-        container.addEventListener("mousemove", debounce(handleMouseMove, 50)); 
-
-        container.addEventListener("mouseout", handleMouseOut);
-        </script>
 
 
         </div>
@@ -241,6 +256,59 @@
       AOS.init();
     </script>
     <script>
+    document.querySelectorAll('.md-textbox input').forEach(input => {
+  input.addEventListener('input', function() {
+    switch(this.id) {
+      case 'first-name':
+      case 'last-name':
+      case 'country':
+        if (!/^[A-Za-z\s]+$/.test(this.value)) {
+          this.classList.remove('valid-input');
+          this.classList.add('invalid-input');
+        } else {
+          this.classList.remove('invalid-input');
+          this.classList.add('valid-input');
+        }
+        break;
+      case 'email':
+        if (!this.validity.valid) {
+          this.classList.remove('valid-input');
+          this.classList.add('invalid-input');
+        } else {
+          this.classList.remove('invalid-input');
+          this.classList.add('valid-input');
+        }
+        break;
+      case 'address':
+        if (this.value.length === 0) {
+          this.classList.remove('valid-input');
+          this.classList.add('invalid-input');
+        } else {
+          this.classList.remove('invalid-input');
+          this.classList.add('valid-input');
+        }
+        break;
+      default:
+        this.classList.remove('invalid-input');
+        this.classList.remove('valid-input');
+    }
+
+    // After validating this input, check all inputs
+    var allValid = Array.from(document.querySelectorAll('.md-textbox input')).every(input => input.classList.contains('valid-input'));
+
+    // If all inputs are valid, add the 'valid' class to the button, otherwise remove it
+    var button = document.querySelector('.button');
+    if (allValid) {
+      button.classList.add('valid-input');
+    } else {
+      button.classList.remove('valid-input');
+    }
+
+
+
+  });
+});
+
     document.querySelectorAll('.md-textbox input').forEach(input => {
       input.addEventListener('input', function() {
         switch(this.id) {
