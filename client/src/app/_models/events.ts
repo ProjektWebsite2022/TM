@@ -9,6 +9,17 @@ export interface Event {
     location: Location
 }
 
+export interface Event2 {
+    Eventnummer: number,
+    Typ: string,
+    Titel: string,
+    Start: Date,
+    Ende: Date,
+    Beschreibung: string,
+    Preis: number
+};
+
+
 export interface Location {
     name: string,
     capacity: number,
