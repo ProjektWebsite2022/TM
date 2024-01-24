@@ -30,7 +30,7 @@
                             </h3>
                           </div>
     
-                          <p class="text-right text-sm font-medium text-gray-900">{{ (cartItem.product.Preis / 100).toFixed(2) }} €</p>
+                          <p class="text-right text-sm font-medium text-gray-900">{{ (cartItem.product.Preis).toFixed(2) }} €</p>
                         </div>
     
                         <div class="mt-4 flex items-center sm:absolute sm:left-1/2 sm:top-0 sm:mt-0 sm:block">
@@ -74,7 +74,7 @@
                     <dl class="-my-4 divide-y divide-gray-200 text-sm">
                       <div class="flex items-center justify-between py-4">
                         <dt class="text-gray-600">Zwischensumme</dt>
-                        <dd class="font-medium text-gray-900">{{ (finalPrice / 100).toFixed(2) }} €</dd>
+                        <dd class="font-medium text-gray-900">{{ (finalPrice).toFixed(2) }} €</dd>
                       </div>
                       <div class="flex items-center justify-between py-4">
                         <dt class="text-gray-600">Lieferung</dt>
@@ -82,7 +82,7 @@
                       </div>
                       <div class="flex items-center justify-between py-4">
                         <dt class="text-base font-medium text-gray-900">Bestellung gesamt</dt>
-                        <dd class="text-base font-medium text-gray-900">{{ (finalPrice / 100).toFixed(2) }} €</dd>
+                        <dd class="text-base font-medium text-gray-900">{{ (finalPrice).toFixed(2) }} €</dd>
                       </div>
                     </dl>
                   </div>
