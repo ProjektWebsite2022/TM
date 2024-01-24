@@ -65,7 +65,7 @@ export class SingleEventComponent implements OnInit {
       return
     }
 
-    this.cartService.addToCart(this.event, this.formgroup.value.amount);
+    this.cartService.addToCart(this.event2, this.formgroup.value.amount);
 
     this.router.navigate(['warenkorb']);
 

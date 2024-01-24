@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CartItem } from 'src/app/_models/cartItem';
 import { Event } from 'src/app/_models/events';
+import { Event2 } from 'src/app/_models/events';
 import { CartService } from 'src/app/_services/cart.service';
 const stripe = require('stripe')('sk_test_51N4H04E6HRSadoukZmnWR4QOXSLMpLA8K38JEak15afw1zih8k8MUgtcoiPONmVlwVOb1zBz6JoITxqAKs68olYV004dkEq1qq')
 
@@ -32,11 +33,11 @@ export class WarenkorbComponent implements OnInit {
     this.finalPrice = 0;
 
     this.cart.forEach(element => {
-      this.finalPrice += element.amount * element.product.price;
+      this.finalPrice += element.amount * element.product.Preis;
     })
   }
 
-  public updateCart(amount: number, product: Event) {
+  public updateCart(amount: number, product: Event2) {
     console.log('updating');
     console.log(amount);
     console.log(product);
@@ -61,9 +62,9 @@ export class WarenkorbComponent implements OnInit {
           currency: 'eur',
           tax_behavior: 'exclusive',
           product_data: {
-            name: cartItem.product.name,
+            name: cartItem.product.Titel,
           },
-          unit_amount: cartItem.product.price,
+          unit_amount: cartItem.product.Preis,
         },
         adjustable_quantity: {
           enabled: true,
