@@ -15,7 +15,7 @@ export class SingleEventComponent implements OnInit {
 
   eventId: number;
   event: Event;
-  event2: Event2[] = [];
+  event2: Event2;
 
   baseUrl2 = 'http://localhost:3000/eventg';
   
@@ -52,7 +52,7 @@ export class SingleEventComponent implements OnInit {
     //console.log(this.events2.Typ);
   }
 
-  async getAllEvents(url: URL): Promise<Event2[]> {
+  async getAllEvents(url: URL): Promise<Event2> {
     const response = await fetch(url);
       return await response.json();
   }
