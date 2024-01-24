@@ -44,6 +44,7 @@ export class SingleEventComponent implements OnInit {
     this.baseUrl2 = `${this.baseUrl2}?id=${this.eventId}`;
     await this.loadEvent(this.baseUrl2);
     console.log('Event', this.event2);
+    console.log(this.event);
   }
 
   async loadEvent(url) {
