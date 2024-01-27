@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
+
 
 @Component({
   selector: 'app-contact',
@@ -7,6 +9,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
+  url = 'http://localhost:3000/submit';
 
   public message: {
     message: string;
@@ -21,10 +24,13 @@ export class ContactComponent implements OnInit {
 
   contactFormGroup: FormGroup;
 
-  constructor(
-    //private translateService: TranslateService
-  ) { 
+  constructor(private http: HttpClient) { }
 
+  sendEvent(contactFormGroup: FormGroup) {
+    this.http.post(this.url, contactFormGroup).subscribe(
+      response => console.log('Event gesendet', response),
+      error => console.error('Fehler beim Senden des Events', error)
+    );
   }
 
   ngOnInit(): void {
@@ -56,6 +62,8 @@ export class ContactComponent implements OnInit {
 
     this.loading = true;
     console.log('loading');
+    this.sendEvent(this.contactFormGroup.value);
+
 
       this.message = {
         color: 'bg-green-500',
