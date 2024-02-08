@@ -17,6 +17,7 @@ export class WarenkorbComponent implements OnInit {
   @ViewChild('AdresseWarenkorb') contactComponent: ContactComponent;
 
   url = 'http://localhost:3000/Bestellung';
+  Fehlermeldung: String;
 
   getDataFromKontakt() {
     console.log(this.contactComponent.AdresseAnWarenkorb());
@@ -115,6 +116,7 @@ export class WarenkorbComponent implements OnInit {
     const adresse = this.contactComponent.AdresseAnWarenkorb();
     if (adresse && Object.keys(adresse).length === 0) {
       console.log('Leer');
+      this.Fehlermeldung = 'Bitte fülle das Kontaktformular richtig aus!';
     } else {
       // line Items erstellen.
       let lineItems = []; 

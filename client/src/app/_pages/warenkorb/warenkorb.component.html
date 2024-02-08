@@ -67,7 +67,6 @@
               
               <!--Hier wird das Kontaktformular eingebunden-->
               <app-contact #AdresseWarenkorb [showComponent1]="false" [showComponent2] = "false"></app-contact>
-              <button (click)="getDataFromKontakt()">Kontaktdaten</button>
     
               <!-- Order summary -->
               <section aria-labelledby="summary-heading">
@@ -94,6 +93,7 @@
                 <div class="mt-10">
                   <!--Hier wird an den Bezahldienstleister gesendet-->
                   <button (click)="BestellungAbschliesen()" class="w-full rounded-md border border-transparent bg-indigo-600 px-4 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50">Jetzt bestellen</button>
+                  <h1>{{Fehlermeldung}}</h1>
                 </div>
     
                 <div class="mt-6 text-center text-sm text-gray-500">
