@@ -10,6 +10,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ContactComponent implements OnInit {
   @Input() showComponent1: boolean = true;
+  @Input() showComponent2: boolean = true;
+  @Input() showComponent3: boolean = true;
 
   Kontaktdaten = {};
   url = 'http://localhost:3000/submit';
@@ -73,6 +75,36 @@ export class ContactComponent implements OnInit {
     console.log('loading');
     this.Kontaktdaten = this.contactFormGroup.value;
     this.sendEvent(this.contactFormGroup.value);
+
+
+      this.message = {
+        color: 'bg-green-500',
+        message: 'Vielen Dank für Ihre Anfrage. Wir werden uns schnellstmöglichst mit Ihnen in Verbindung setzen.'
+      };
+      this.createFormGroup();
+
+
+    this.loading = false;
+    return this.Kontaktdaten
+    
+  }
+
+  public async ContactForm() {
+    console.log('submitting');
+    console.log(this.contactFormGroup.value);
+    this.message = null;
+    if (this.contactFormGroup.invalid) {
+      this.message = {
+        color: 'bg-red-500',
+        message: 'Bitte füllen Sie alle Felder aus.'
+      }
+      console.log('alle felder ausfüllen');
+      return
+    }
+
+    this.loading = true;
+    console.log('loading');
+    this.Kontaktdaten = this.contactFormGroup.value;
 
 
       this.message = {
