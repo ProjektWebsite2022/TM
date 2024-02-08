@@ -1,5 +1,5 @@
 <div class="container mx-auto px-8 pt-24 md:pt-2 lg:py-24" id="kontakt">
-    <div class="grid lg:grid-cols-2 gap-8 items-center">
+    <div>
       <div class="">
         <p class="uppercase text-slate-500 mb-1 text-base">EMPFOHLEN</p>
         <h3 class="text-2xl lg:text-3xl text-slate-700 font-bold">Kontaktformular</h3>
@@ -141,99 +141,100 @@
         </div>
       </div>
       <!-- next -->
-      <div class="bg-slate-50 p-8 rounded">
-        <div class="">
-          <p class="uppercase text-slate-500 mb-1 text-base">KONTAKT</p>
-          <h4 class="text-2xl lg:text-3xl text-slate-700 font-bold">Kontaktinformationen</h4>
-          <p class="text-slate-700 mt-2">
-            Wir bitten Sie, unser Kontaktformular zu benutzen. So können wir Ihnen einen schnellen Service gewährleisten.
-          </p>
-        </div>
-  
-        <div class="">
+      <ng-container *ngIf="showComponent1">
+        <div class="bg-slate-50 p-8 rounded">
           <div class="">
-            <ul class="mt-8 text-slate-700 space-y-3 text-md">
-              <li class="inline-flex items-center">
-                <svg
-                  class="mr-2"
-                  width="24"
-                  height="24"
-                  stroke-width="1.5"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M20 10C20 14.4183 12 22 12 22C12 22 4 14.4183 4 10C4 5.58172 7.58172 2 12 2C16.4183 2 20 5.58172 20 10Z"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                  />
-                  <path
-                    d="M12 11C12.5523 11 13 10.5523 13 10C13 9.44772 12.5523 9 12 9C11.4477 9 11 9.44772 11 10C11 10.5523 11.4477 11 12 11Z"
-                    fill="currentColor"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-                <span class="hover:underline cursor-pointer">168, St. Christopher Street, MT – Valletta VLT 1467</span>
-              </li>
-              <br />
-              <li class="inline-flex items-center">
-                <svg
-                  class="mr-2"
-                  width="24"
-                  height="24"
-                  stroke-width="1.5"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M18.1182 14.702L14 15.5C11.2183 14.1038 9.5 12.5 8.5 10L9.26995 5.8699L7.81452 2L4.0636 2C2.93605 2 2.04814 2.93178 2.21654 4.04668C2.63695 6.83 3.87653 11.8765 7.5 15.5C11.3052 19.3052 16.7857 20.9564 19.802 21.6127C20.9668 21.8662 22 20.9575 22 19.7655L22 16.1812L18.1182 14.702Z"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-               Telefon: &nbsp; <a class="hover:underline" href="tel: +356-27-780179"> +356-27-780179</a>
-              </li>
-              <br />
-              <li class="inline-flex items-center">
-                <svg
-                  class="mr-2"
-                  width="24"
-                  height="24"
-                  stroke-width="1.5"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M7 9L12 12.5L17 9"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M2 17V7C2 5.89543 2.89543 5 4 5H20C21.1046 5 22 5.89543 22 7V17C22 18.1046 21.1046 19 20 19H4C2.89543 19 2 18.1046 2 17Z"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                  />
-                </svg>
-  
-                E-Mail: &nbsp;
-                <a class="hover:underline" href="mailto:info@vansterling.com">info@vansterling.com</a>
-              </li>
-            </ul>
-          </div>
-          <div class="">
-            <p class="mt-8 text-slate-700">
-              Wir freuen uns über Ihre Anfrage und werden diese schnellstmöglich bearbeiten.
+            <p class="uppercase text-slate-500 mb-1 text-base">KONTAKT</p>
+            <h4 class="text-2xl lg:text-3xl text-slate-700 font-bold">Kontaktinformationen</h4>
+            <p class="text-slate-700 mt-2">
+              Wir bitten Sie, unser Kontaktformular zu benutzen. So können wir Ihnen einen schnellen Service gewährleisten.
             </p>
           </div>
+    
+          <div class="">
+            <div class="">
+              <ul class="mt-8 text-slate-700 space-y-3 text-md">
+                <li class="inline-flex items-center">
+                  <svg
+                    class="mr-2"
+                    width="24"
+                    height="24"
+                    stroke-width="1.5"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M20 10C20 14.4183 12 22 12 22C12 22 4 14.4183 4 10C4 5.58172 7.58172 2 12 2C16.4183 2 20 5.58172 20 10Z"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                    />
+                    <path
+                      d="M12 11C12.5523 11 13 10.5523 13 10C13 9.44772 12.5523 9 12 9C11.4477 9 11 9.44772 11 10C11 10.5523 11.4477 11 12 11Z"
+                      fill="currentColor"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <span class="hover:underline cursor-pointer">168, St. Christopher Street, MT – Valletta VLT 1467</span>
+                </li>
+                <br />
+                <li class="inline-flex items-center">
+                  <svg
+                    class="mr-2"
+                    width="24"
+                    height="24"
+                    stroke-width="1.5"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M18.1182 14.702L14 15.5C11.2183 14.1038 9.5 12.5 8.5 10L9.26995 5.8699L7.81452 2L4.0636 2C2.93605 2 2.04814 2.93178 2.21654 4.04668C2.63695 6.83 3.87653 11.8765 7.5 15.5C11.3052 19.3052 16.7857 20.9564 19.802 21.6127C20.9668 21.8662 22 20.9575 22 19.7655L22 16.1812L18.1182 14.702Z"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                Telefon: &nbsp; <a class="hover:underline" href="tel: +356-27-780179"> +356-27-780179</a>
+                </li>
+                <br />
+                <li class="inline-flex items-center">
+                  <svg
+                    class="mr-2"
+                    width="24"
+                    height="24"
+                    stroke-width="1.5"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M7 9L12 12.5L17 9"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M2 17V7C2 5.89543 2.89543 5 4 5H20C21.1046 5 22 5.89543 22 7V17C22 18.1046 21.1046 19 20 19H4C2.89543 19 2 18.1046 2 17Z"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                    />
+                  </svg>
+    
+                  E-Mail: &nbsp;
+                  <a class="hover:underline" href="mailto:info@vansterling.com">info@vansterling.com</a>
+                </li>
+              </ul>
+            </div>
+            <div class="">
+              <p class="mt-8 text-slate-700">
+                Wir freuen uns über Ihre Anfrage und werden diese schnellstmöglich bearbeiten.
+              </p>
+            </div>
+          </div>
         </div>
-      </div>
+      </ng-container>
     </div>
   </div>
-   
