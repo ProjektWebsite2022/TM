@@ -64,7 +64,7 @@ export class WarenkorbComponent implements OnInit {
           product_data: {
             name: cartItem.product.Titel,
           },
-          unit_amount: cartItem.product.Preis,
+          unit_amount: cartItem.product.Preis * 100,
         },
         adjustable_quantity: {
           enabled: true,
@@ -87,6 +87,30 @@ export class WarenkorbComponent implements OnInit {
     window.location.href = session.url;
 
     
+  }
+
+  public BestellungAbschließen(){
+    // line Items erstellen.
+    let lineItems = []; 
+
+    for (let cartItem of this.cart) {
+      lineItems.push({
+        price_data: {
+          currency: 'eur',
+          tax_behavior: 'exclusive',
+          product_data: {
+            name: cartItem.product.Titel,
+          },
+          unit_amount: cartItem.product.Preis * 100,
+        },
+        adjustable_quantity: {
+          enabled: true,
+          minimum: 1,
+          maximum: 10,
+        },
+        quantity: cartItem.amount,
+      })
+    }
   }
 
 }
