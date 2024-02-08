@@ -5,6 +5,7 @@ import { Event } from 'src/app/_models/events';
 import { Event2 } from 'src/app/_models/events';
 import { CartService } from 'src/app/_services/cart.service';
 import { ContactComponent } from 'src/app/_components/contact/contact.component';
+import { HttpClient } from '@angular/common/http';
 const stripe = require('stripe')('sk_test_51N4H04E6HRSadoukZmnWR4QOXSLMpLA8K38JEak15afw1zih8k8MUgtcoiPONmVlwVOb1zBz6JoITxqAKs68olYV004dkEq1qq')
 
 @Component({
@@ -14,6 +15,8 @@ const stripe = require('stripe')('sk_test_51N4H04E6HRSadoukZmnWR4QOXSLMpLA8K38JE
 })
 export class WarenkorbComponent implements OnInit {
   @ViewChild('AdresseWarenkorb') contactComponent: ContactComponent;
+
+  url = 'http://localhost:3000/Bestellung';
 
   getDataFromKontakt() {
     console.log(this.contactComponent.AdresseAnWarenkorb());
@@ -31,7 +34,8 @@ export class WarenkorbComponent implements OnInit {
 
   constructor(
     private cartService: CartService,
-    private router: Router
+    private router: Router,
+    private http: HttpClient
   ) { }
 
   ngOnInit(): void {
@@ -92,12 +96,18 @@ export class WarenkorbComponent implements OnInit {
       success_url: 'http://localhost:4200/buchungsbestaetigung',
       cancel_url: 'http://localhost:4200/warenkorb',
     });
-    
-
     window.location.href = session.url;
-
-    
   }
+
+
+  // Bestelldaten senden
+  sendEvent(Bestellung) {
+    this.http.post(this.url, Bestellung).subscribe(
+      response => console.log('Event gesendet', response),
+      error => console.error('Fehler beim Senden des Events', error)
+    );
+  }
+
 
   public BestellungAbschliesen(){
 
@@ -111,23 +121,14 @@ export class WarenkorbComponent implements OnInit {
 
       for (let cartItem of this.cart) {
         lineItems.push({
-          price_data: {
-            currency: 'eur',
-            tax_behavior: 'exclusive',
-            product_data: {
-              name: cartItem.product.Titel,
-            },
-            unit_amount: cartItem.product.Preis * 100,
-          },
-          adjustable_quantity: {
-            enabled: true,
-            minimum: 1,
-            maximum: 10,
-          },
+          name: cartItem.product.Titel,
+          unit_amount: cartItem.product.Preis * 100,
           quantity: cartItem.amount,
         })
       }
-      this.processPayment()
+      lineItems.push(adresse);
+      this.sendEvent(lineItems);
+      this.processPayment();
     }
   }
 
