@@ -10,6 +10,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ContactComponent implements OnInit {
   @Input() showComponent1: boolean = true;
+
+  Kontaktdaten = {};
   url = 'http://localhost:3000/submit';
 
   public message: {
@@ -32,6 +34,12 @@ export class ContactComponent implements OnInit {
       response => console.log('Event gesendet', response),
       error => console.error('Fehler beim Senden des Events', error)
     );
+  }
+
+
+  AdresseAnWarenkorb() {
+    console.log(this.Kontaktdaten);
+    return this.Kontaktdaten;
   }
 
   ngOnInit(): void {
@@ -63,6 +71,7 @@ export class ContactComponent implements OnInit {
 
     this.loading = true;
     console.log('loading');
+    this.Kontaktdaten = this.contactFormGroup.value;
     this.sendEvent(this.contactFormGroup.value);
 
 
@@ -74,6 +83,7 @@ export class ContactComponent implements OnInit {
 
 
     this.loading = false;
+    return this.Kontaktdaten
     
   }
 }

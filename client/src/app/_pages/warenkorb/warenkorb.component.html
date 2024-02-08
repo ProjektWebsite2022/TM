@@ -64,8 +64,10 @@
     
                 </ul>
               </section>
-
-              <app-contact [showComponent1]="false"></app-contact>
+              
+              <!--Hier wird das Kontaktformular eingebunden-->
+              <app-contact #AdresseWarenkorb [showComponent1]="false"></app-contact>
+              <button (click)="getDataFromKontakt()">Kontaktdaten</button>
     
               <!-- Order summary -->
               <section aria-labelledby="summary-heading">

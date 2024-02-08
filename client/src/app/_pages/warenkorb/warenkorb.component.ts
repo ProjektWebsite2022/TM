@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { CartItem } from 'src/app/_models/cartItem';
 import { Event } from 'src/app/_models/events';
 import { Event2 } from 'src/app/_models/events';
 import { CartService } from 'src/app/_services/cart.service';
+import { ContactComponent } from 'src/app/_components/contact/contact.component';
 const stripe = require('stripe')('sk_test_51N4H04E6HRSadoukZmnWR4QOXSLMpLA8K38JEak15afw1zih8k8MUgtcoiPONmVlwVOb1zBz6JoITxqAKs68olYV004dkEq1qq')
 
 @Component({
@@ -12,6 +13,11 @@ const stripe = require('stripe')('sk_test_51N4H04E6HRSadoukZmnWR4QOXSLMpLA8K38JE
   styleUrls: ['./warenkorb.component.css']
 })
 export class WarenkorbComponent implements OnInit {
+  @ViewChild('AdresseWarenkorb') contactComponent: ContactComponent;
+
+  getDataFromKontakt() {
+    console.log(this.contactComponent.AdresseAnWarenkorb());
+  }
 
   cart: CartItem[];
 
