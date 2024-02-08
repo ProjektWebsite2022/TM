@@ -17,6 +17,10 @@ export class WarenkorbComponent implements OnInit {
 
   getDataFromKontakt() {
     console.log(this.contactComponent.AdresseAnWarenkorb());
+    const adresse = this.contactComponent.AdresseAnWarenkorb();
+    if (adresse && Object.keys(adresse).length === 0) {
+      console.log('Leer');
+    }
   }
 
   cart: CartItem[];
@@ -95,27 +99,35 @@ export class WarenkorbComponent implements OnInit {
     
   }
 
-  public BestellungAbschließen(){
-    // line Items erstellen.
-    let lineItems = []; 
+  public BestellungAbschliesen(){
 
-    for (let cartItem of this.cart) {
-      lineItems.push({
-        price_data: {
-          currency: 'eur',
-          tax_behavior: 'exclusive',
-          product_data: {
-            name: cartItem.product.Titel,
+    console.log(this.contactComponent.AdresseAnWarenkorb());
+    const adresse = this.contactComponent.AdresseAnWarenkorb();
+    if (adresse && Object.keys(adresse).length === 0) {
+      console.log('Leer');
+    } else {
+      // line Items erstellen.
+      let lineItems = []; 
+
+      for (let cartItem of this.cart) {
+        lineItems.push({
+          price_data: {
+            currency: 'eur',
+            tax_behavior: 'exclusive',
+            product_data: {
+              name: cartItem.product.Titel,
+            },
+            unit_amount: cartItem.product.Preis * 100,
           },
-          unit_amount: cartItem.product.Preis * 100,
-        },
-        adjustable_quantity: {
-          enabled: true,
-          minimum: 1,
-          maximum: 10,
-        },
-        quantity: cartItem.amount,
-      })
+          adjustable_quantity: {
+            enabled: true,
+            minimum: 1,
+            maximum: 10,
+          },
+          quantity: cartItem.amount,
+        })
+      }
+      this.processPayment()
     }
   }
 
