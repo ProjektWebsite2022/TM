@@ -113,7 +113,9 @@ export class WarenkorbComponent implements OnInit {
   public BestellungAbschliesen(){
 
     console.log(this.contactComponent.AdresseAnWarenkorb());
+    // Hier drin E-Mailadresse in adresse
     const adresse = this.contactComponent.AdresseAnWarenkorb();
+
     if (adresse && Object.keys(adresse).length === 0) {
       console.log('Leer');
       this.Fehlermeldung = 'Bitte fülle das Kontaktformular richtig aus!';
@@ -131,6 +133,7 @@ export class WarenkorbComponent implements OnInit {
       lineItems.push(adresse);
       this.sendEvent(lineItems);
       this.processPayment();
+      // Email Funktion
     }
   }
 
