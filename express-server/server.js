@@ -1,8 +1,14 @@
-const express = require('express');
+
 const mysql = require('mysql');
 
-// Create Express app
+const express = require('express');
 const app = express();
+
+// Define the port to listen on
+const PORT = 3000;
+
+// Create Express app
+
 app.use(express.json()); // Middleware for parsing JSON bodies
 
 // Database configuration
@@ -117,6 +123,6 @@ app.route('/:tableName')
     });
 
 // Start the server
-app.listen(port, () => {
-    console.log(`Server running on http://localhost:${port}`);
-});
+app.listen(PORT, '0.0.0.0', function() {
+    console.log(`Server is running on port ${PORT}`);
+  });
