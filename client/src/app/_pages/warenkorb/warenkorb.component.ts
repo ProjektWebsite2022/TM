@@ -6,6 +6,8 @@ import { Event2 } from 'src/app/_models/events';
 import { CartService } from 'src/app/_services/cart.service';
 import { ContactComponent } from 'src/app/_components/contact/contact.component';
 import { HttpClient } from '@angular/common/http';
+import emailjs from '@emailjs/browser';
+// npm install --save @emailjs/browser
 const stripe = require('stripe')('sk_test_51N4H04E6HRSadoukZmnWR4QOXSLMpLA8K38JEak15afw1zih8k8MUgtcoiPONmVlwVOb1zBz6JoITxqAKs68olYV004dkEq1qq')
 
 @Component({
@@ -100,6 +102,17 @@ export class WarenkorbComponent implements OnInit {
     window.location.href = session.url;
   }
 
+  // E-Mailfunktion
+  public sendEmail(){
+    const adresse = this.contactComponent.AdresseAnWarenkorb();
+    //Initialisierung mit dem Public Key
+    emailjs.init('JVWH3mFV7QJQMSXoH');
+    //Framework mit vorgefertigtem Template wird aufgerufen, Parameter aus dem Kontaktformular werden übergeben.
+    emailjs.send("service_bc47623","template_0s4vibr",{
+      useremail: adresse.email,
+      userName: adresse.firstName,
+      });
+  }
 
   // Bestelldaten senden
   sendEvent(Bestellung) {
@@ -107,7 +120,7 @@ export class WarenkorbComponent implements OnInit {
       response => console.log('Event gesendet', response),
       error => console.error('Fehler beim Senden des Events', error)
     );
-  }
+  } 
 
 
   public BestellungAbschliesen(){
@@ -134,6 +147,7 @@ export class WarenkorbComponent implements OnInit {
       this.sendEvent(lineItems);
       this.processPayment();
       // Email Funktion
+      this.sendEmail();
     }
   }
 

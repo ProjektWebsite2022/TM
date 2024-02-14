@@ -13,7 +13,14 @@ export class ContactComponent implements OnInit {
   @Input() showComponent2: boolean = true;
   @Input() showComponent3: boolean = true;
 
-  Kontaktdaten = {};
+
+  Kontaktdaten = {
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    message: ''
+  };
   url = 'http://localhost:3000/submit';
 
   public message: {
