@@ -1,0 +1,100 @@
+<div class="bg-slate-100 sticky w-full top-0 z-50">
+    <div class="container mx-auto px-8">
+      <div
+        class="flex items-center flex-wrap justify-end h-12 text-slate-700 text-sm"
+      >
+        <div class="hidden lg:block pr-0 lg:pr-4">
+          <a href="tel:012312345">Service-Hotline 0123/12345 </a>
+        </div>
+        <div class="hidden lg:block">
+          <a routerLink="/warenkorb">Warenkorb</a>
+        </div>
+        <div>
+          <!-- <app-locale-selector></app-locale-selector> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div
+    class="w-full text-slate-700 bg-white sticky z-50 top-12"
+    id="navigation"
+    style="transition: 0.4s"
+  >
+    <div
+      id="navigation-height"
+      style="height: 5rem"
+      class="flex flex-col container px-8 mx-auto lg:items-center lg:justify-between lg:flex-row"
+    >
+      <div class="flex flex-row items-center justify-between py-4">
+        <a
+          routerLink="/"
+          class="text-lg font-semibold tracking-widest text-slate-900 uppercase rounded-lg focus:outline-none focus:shadow-outline"
+        >
+          <img
+            class=""
+            style="height: 2.15rem; transition: 0.4s"
+            src="../../../assets/images/logoTM.png"
+            id="logo"
+            alt="Logo"
+          />
+        </a>
+        <button
+          (click)="isMobileOpened = !isMobileOpened"
+          class="rounded-lg lg:hidden focus:outline-none focus:shadow-outline"
+        >
+          <svg fill="currentColor" viewBox="0 20 20" class="w-6 h-6">
+            <path
+              *ngIf="!isMobileOpened"
+              fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+              clip-rule="evenodd"
+            ></path>
+            <path
+              *ngIf="isMobileOpened"
+              fill-rule="evenodd"
+              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </button>
+      </div>
+  
+      <nav
+        [ngClass]="{ flex: isMobileOpened, hidden: !isMobileOpened }"
+        class="flex-col items-center flex-grow space-y-4 lg:space-y-0 hidden pb-4 lg:pb-0 lg:flex lg:justify-end lg:flex-row bg-white"
+      >
+        <div *ngFor="let nav of navigation">
+          <a
+            *ngIf="!nav.subNav?.length"
+            [ngClass]="{ 'space-y-4': isMobileOpened }"
+            class="py-2 mt-2 lg:mt-0 lg:ml-4 hover:text-slate-900 focus:text-slate-900 focus:outline-none focus:shadow-outline"
+            routerLink="{{ nav.routerLink }}"
+            >{{ nav.name }}</a
+          >
+  
+          <app-dropdown-navigation-element
+            *ngIf="nav.subNav?.length"
+            [nav]="nav"
+            [isMobileOpened]="isMobileOpened"
+            class=""
+          >
+          </app-dropdown-navigation-element>
+        </div>
+  
+        <!-- <a
+          class="py-2 mt-2 lg:mt-0 lg:ml-4 hover:text-slate-900 focus:text-slate-900 focus:outline-none focus:shadow-outline lg:hidden"
+          routerLink="/{{ currentLocale }}/partners"
+          >{{ "navigation.findPartner" | translate }}</a
+        > -->
+  
+        <button
+          class="px-5 py-2 text-sm bg-orange-500 rounded-full ml-4 text-white font-medium hover:bg-orange-400 transition-all"
+          routerLink="/kontakt"
+          >Kontakt</button
+        >
+      </nav>
+    </div>
+  </div>
+
+  

@@ -1,0 +1,65 @@
+
+> express-server@1.0.0 start
+> node server.js
+
+Server is running on port 3000
+Successfully connected to the MariaDB database.
+node:events:492
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:217:20)
+Emitted 'error' event on Connection instance at:
+    at Connection._handleProtocolError (/var/www/TM/express-server/node_modules/mysql/lib/Connection.js:423:8)
+    at Protocol.emit (node:events:514:28)
+    at Protocol._delegateError (/var/www/TM/express-server/node_modules/mysql/lib/protocol/Protocol.js:398:10)
+    at Protocol.handleNetworkError (/var/www/TM/express-server/node_modules/mysql/lib/protocol/Protocol.js:371:10)
+    at Connection._handleNetworkError (/var/www/TM/express-server/node_modules/mysql/lib/Connection.js:418:18)
+    at Socket.emit (node:events:514:28)
+    at emitErrorNT (node:internal/streams/destroy:151:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+  errno: -104,
+  code: 'ECONNRESET',
+  syscall: 'read',
+  fatal: true
+}
+
+Node.js v20.10.0
+
+> express-server@1.0.0 start
+> node server.js
+
+Server is running on port 3000
+Successfully connected to the MariaDB database.
+node:events:492
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:217:20)
+Emitted 'error' event on Connection instance at:
+    at Connection._handleProtocolError (/var/www/TM/express-server/node_modules/mysql/lib/Connection.js:423:8)
+    at Protocol.emit (node:events:514:28)
+    at Protocol._delegateError (/var/www/TM/express-server/node_modules/mysql/lib/protocol/Protocol.js:398:10)
+    at Protocol.handleNetworkError (/var/www/TM/express-server/node_modules/mysql/lib/protocol/Protocol.js:371:10)
+    at Connection._handleNetworkError (/var/www/TM/express-server/node_modules/mysql/lib/Connection.js:418:18)
+    at Socket.emit (node:events:514:28)
+    at emitErrorNT (node:internal/streams/destroy:151:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+  errno: -104,
+  code: 'ECONNRESET',
+  syscall: 'read',
+  fatal: true
+}
+
+Node.js v20.10.0
+
+> express-server@1.0.0 start
+> node server.js
+
+Server is running on port 3000
+Successfully connected to the MariaDB database.
+Terminated

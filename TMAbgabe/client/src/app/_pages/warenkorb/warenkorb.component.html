@@ -1,0 +1,165 @@
+
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-4xl pt-16">
+        <h1 class="text-3xl font-bold tracking-tight text-gray-900">Warenkorb</h1>
+
+        <div *ngIf="!cart || cart.length === 0">
+            Es sind noch keine Veranstaltungen im Warenkorb...
+            <br>
+            <a routerLink="/events" class="font-medium text-indigo-600 hover:text-indigo-500">
+                Veranstaltungen finden
+                <span aria-hidden="true"> &rarr;</span>
+              </a>
+        </div>
+
+        <div *ngIf="cart && cart.length != 0">
+            <section aria-labelledby="cart-heading">
+            
+                <ul role="list" class="divide-y divide-gray-200 border-b border-t border-gray-200">
+                  <li *ngFor="let cartItem of cart" class="flex py-6 sm:py-10">
+                    <div class="flex-shrink-0">
+                      <img src="https://tailwindui.com/img/ecommerce-images/shopping-cart-page-01-product-03.jpg" alt="Insulated bottle with white base and black snap lid." class="h-24 w-24 rounded-lg object-cover object-center sm:h-32 sm:w-32">
+                    </div>
+    
+                    <div class="relative ml-4 flex flex-1 flex-col justify-between sm:ml-6">
+                      <div>
+                        <div class="flex justify-between sm:grid sm:grid-cols-2">
+                          <div class="pr-6">
+                            <h3 class="text-sm">
+                              <a routerLink="/events/{{ cartItem.product.Eventnummer }}" class="font-medium text-gray-700 hover:text-gray-800">{{ cartItem.product.Titel }}</a>
+                            </h3>
+                          </div>
+    
+                          <p class="text-right text-sm font-medium text-gray-900">{{ (cartItem.product.Preis).toFixed(2) }} €</p>
+                        </div>
+    
+                        <div class="mt-4 flex items-center sm:absolute sm:left-1/2 sm:top-0 sm:mt-0 sm:block">
+                          <!-- <select (change)="updateCart($event.value, cartItem.id)" id="quantity-0" name="quantity-0" class="block max-w-full rounded-md border border-gray-300 py-1.5 text-left text-base font-medium leading-5 text-gray-700 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 sm:text-sm">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                          </select> -->
+                          <input type="number" (change)="updateCart($event.target.value, cartItem.product)" class="block pl-4 max-w-full rounded-md border border-gray-300 py-1.5 text-left text-base font-medium leading-5 text-gray-700 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 sm:text-sm" value="{{ cartItem.amount }}">
+
+    
+                          <button (click)="deleteFromCart(cartItem.product.Eventnummer)" type="button" class="ml-4 text-sm font-medium text-indigo-600 hover:text-indigo-500 sm:ml-0 sm:mt-3">
+                            <span>Entfernen</span>
+                          </button>
+                        </div>
+                      </div>
+    
+                      <p class="mt-4 flex space-x-2 text-sm text-gray-700">
+                        <svg class="h-5 w-5 flex-shrink-0 text-green-500" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                          <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+                        </svg>
+                        <span>Verfügbar</span>
+                      </p>
+                    </div>
+                  </li>
+    
+                </ul>
+              </section>
+              
+              <!--Hier wird das Kontaktformular eingebunden-->
+              <app-contact #AdresseWarenkorb [showComponent1]="false" [showComponent2] = "false"></app-contact>
+    
+              <!-- Order summary -->
+              <section aria-labelledby="summary-heading">
+                <div class="rounded-lg bg-gray-50 px-4 py-6 sm:p-6 lg:p-8">
+                  <h2 id="summary-heading" class="sr-only">Bestellung Zusammenfassung</h2>
+    
+                  <div class="flow-root">
+                    <dl class="-my-4 divide-y divide-gray-200 text-sm">
+                      <div class="flex items-center justify-between py-4">
+                        <dt class="text-gray-600">Zwischensumme</dt>
+                        <dd class="font-medium text-gray-900">{{ (finalPrice).toFixed(2) }} €</dd>
+                      </div>
+                      <div class="flex items-center justify-between py-4">
+                        <dt class="text-gray-600">Lieferung</dt>
+                        <dd class="font-medium text-gray-900">Kostenlose Lieferung</dd>
+                      </div>
+                      <div class="flex items-center justify-between py-4">
+                        <dt class="text-base font-medium text-gray-900">Bestellung gesamt</dt>
+                        <dd class="text-base font-medium text-gray-900">{{ (finalPrice).toFixed(2) }} €</dd>
+                      </div>
+                    </dl>
+                  </div>
+                </div>
+                <div class="mt-10">
+                  <!--Hier wird an den Bezahldienstleister gesendet-->
+                  <button (click)="BestellungAbschliesen()" class="w-full rounded-md border border-transparent bg-indigo-600 px-4 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50">Jetzt bestellen</button>
+                  <h1>{{Fehlermeldung}}</h1>
+                </div>
+    
+                <div class="mt-6 text-center text-sm text-gray-500">
+                  <p>
+                    oder
+                    <a routerLink="/events" class="font-medium text-indigo-600 hover:text-indigo-500">
+                      weiter Einkaufen 
+                      <span aria-hidden="true"> &rarr;</span>
+                    </a>
+                  </p>
+                </div>
+              </section>
+        </div>
+      </div>
+    </div>
+
+    <!-- Policy grid -->
+    <section aria-labelledby="policies-heading" class="mt-24 border-t border-gray-200 bg-gray-50">
+      <h2 id="policies-heading" class="sr-only">Unsere Bedingungen</h2>
+
+      <div class="mx-auto max-w-7xl px-4 py-24 sm:px-6 sm:py-32 lg:px-8">
+        <div class="grid grid-cols-1 gap-y-12 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-0">
+          <div class="text-center md:flex md:items-start md:text-left lg:block lg:text-center">
+            <div class="md:flex-shrink-0">
+              <div class="flow-root">
+                <img class="-my-1 mx-auto h-24 w-auto" src="https://tailwindui.com/img/ecommerce/icons/icon-returns-light.svg" alt="">
+              </div>
+            </div>
+            <div class="mt-6 md:ml-4 md:mt-0 lg:ml-0 lg:mt-6">
+              <h3 class="text-base font-medium text-gray-900">Kostenlose Rückgabe</h3>
+              <p class="mt-3 text-sm text-gray-500">Nicht das, was Sie erwartet haben? Legen Sie es zurück in das Paket und bringen Sie die vorfrankierte Briefmarke an.</p>
+            </div>
+          </div>
+          <div class="text-center md:flex md:items-start md:text-left lg:block lg:text-center">
+            <div class="md:flex-shrink-0">
+              <div class="flow-root">
+                <img class="-my-1 mx-auto h-24 w-auto" src="https://tailwindui.com/img/ecommerce/icons/icon-calendar-light.svg" alt="">
+              </div>
+            </div>
+            <div class="mt-6 md:ml-4 md:mt-0 lg:ml-0 lg:mt-6">
+              <h3 class="text-base font-medium text-gray-900">Lieferung am selben Tag</h3>
+              <p class="mt-3 text-sm text-gray-500">Wir bieten einen Lieferservice, den es so noch nie gegeben hat. Bestellen Sie noch heute und erhalten Sie Ihre Tickets innerhalb weniger Stunden.</p>
+            </div>
+          </div>
+          <!-- <div class="text-center md:flex md:items-start md:text-left lg:block lg:text-center">
+            <div class="md:flex-shrink-0">
+              <div class="flow-root">
+                <img class="-my-1 mx-auto h-24 w-auto" src="https://tailwindui.com/img/ecommerce/icons/icon-gift-card-light.svg" alt="">
+              </div>
+            </div>
+            <div class="mt-6 md:ml-4 md:mt-0 lg:ml-0 lg:mt-6">
+              <h3 class="text-base font-medium text-gray-900">All year discount</h3>
+              <p class="mt-3 text-sm text-gray-500">Looking for a deal? You can use the code &quot;ALLYEAR&quot; at checkout and get money off all year round.</p>
+            </div>
+          </div> -->
+          <div class="text-center md:flex md:items-start md:text-left lg:block lg:text-center">
+            <div class="md:flex-shrink-0">
+              <div class="flow-root">
+                <img class="-my-1 mx-auto h-24 w-auto" src="https://tailwindui.com/img/ecommerce/icons/icon-planet-light.svg" alt="">
+              </div>
+            </div>
+            <div class="mt-6 md:ml-4 md:mt-0 lg:ml-0 lg:mt-6">
+              <h3 class="text-base font-medium text-gray-900">Für den Planeten</h3>
+              <p class="mt-3 text-sm text-gray-500">Wir haben uns verpflichtet, 1 % des Umsatzes für die Erhaltung und Wiederherstellung der natürlichen Umwelt zu verwenden.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
